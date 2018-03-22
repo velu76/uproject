@@ -1,6 +1,6 @@
 <?php
 
-namespace App;
+namespace upro;
 
 use Illuminate\Database\Eloquent\Model;
 

@@ -1,11 +1,11 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace upro\Http\Controllers;
 
-use App\Bid;
+use upro\Bid;
 use Illuminate\Http\Request;
 
-class BidController extends Controller
+class BidsController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -41,7 +41,7 @@ class BidController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  \App\Bid  $bid
+     * @param  \upro\Bid  $bid
      * @return \Illuminate\Http\Response
      */
     public function show(Bid $bid)
@@ -52,7 +52,7 @@ class BidController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Bid  $bid
+     * @param  \upro\Bid  $bid
      * @return \Illuminate\Http\Response
      */
     public function edit(Bid $bid)
@@ -64,7 +64,7 @@ class BidController extends Controller
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Bid  $bid
+     * @param  \upro\Bid  $bid
      * @return \Illuminate\Http\Response
      */
     public function update(Request $request, Bid $bid)
@@ -75,7 +75,7 @@ class BidController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Bid  $bid
+     * @param  \upro\Bid  $bid
      * @return \Illuminate\Http\Response
      */
     public function destroy(Bid $bid)
