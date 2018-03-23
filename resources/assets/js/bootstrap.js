@@ -4,8 +4,11 @@
  * CSRF token as a header based on the value of the "XSRF" token cookie.
  */
 import Vue from 'vue';
-import axios from 'axios';
 
+import axios from 'axios';
+import flatPickr from 'vue-flatpickr-component';
+import 'flatpickr/dist/flatpickr.css';
+Vue.use(flatPickr);
 window.axios = require('axios');
 
 window.axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
