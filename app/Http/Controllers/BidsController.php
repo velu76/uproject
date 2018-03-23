@@ -14,7 +14,7 @@ class BidsController extends Controller
      */
     public function index()
     {
-        //
+        return view('bids.index');
     }
 
     /**
