@@ -1,95 +1,255 @@
-<!doctype html>
-<html lang="{{ app()->getLocale() }}">
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
+@extends('layouts.admin')
 
-        <title>Laravel</title>
+{{-- Set the page title --}}
+@section('page_title','Dashboard')
+{{-- Set the nav class active for this page --}}
+@section('dashboard', 'active')
 
-        <!-- Fonts -->
-        <link href="https://fonts.googleapis.com/css?family=Raleway:100,600" rel="stylesheet" type="text/css">
+@section('content')
+<section class="row">
+	<div class="col-sm-12">
+		<section class="row">
+			<div class="col-md-12 col-lg-8">								
+				<div class="card mb-4">
+					<div class="card-block">
+						<h3 class="card-title">Overview</h3>
+						<div class="dropdown card-title-btn-container">
+							<button class="btn btn-sm btn-subtle" type="button"><em class="fa fa-list-ul"></em> View All</button>
+							<button class="btn btn-sm btn-subtle dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><em class="fa fa-cog"></em></button>
+							<div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenuButton"><a class="dropdown-item" href="#"><em class="fa fa-search mr-1"></em> More info</a>
+								<a class="dropdown-item" href="#"><em class="fa fa-thumb-tack mr-1"></em> Pin Window</a>
+								<a class="dropdown-item" href="#"><em class="fa fa-remove mr-1"></em> Close Window</a></div>
+							</div>
+							<h6 class="card-subtitle mb-2 text-muted">Latest traffic stats</h6>
+							<div class="canvas-wrapper">
+								<canvas class="chart" id="line-chart" height="200" width="600"></canvas>
+							</div>
+						</div>
+					</div>
+					<div class="card mb-4">
+						<div class="card-block">
+							<h3 class="card-title">Recent Orders</h3>
+							<div class="dropdown card-title-btn-container">
+								<button class="btn btn-sm btn-subtle" type="button"><em class="fa fa-list-ul"></em> View All</button>
+								<button class="btn btn-sm btn-subtle dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><em class="fa fa-cog"></em></button>
+								<div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenuButton"><a class="dropdown-item" href="#"><em class="fa fa-search mr-1"></em> More info</a>
+									<a class="dropdown-item" href="#"><em class="fa fa-thumb-tack mr-1"></em> Pin Window</a>
+									<a class="dropdown-item" href="#"><em class="fa fa-remove mr-1"></em> Close Window</a></div>
+								</div>
+								<div class="table-responsive">
+									<table class="table table-striped">
+										<thead>
+											<tr>
+												<th>Order #</th>
+												<th>Product</th>
+												<th>Customer</th>
+												<th>Status</th>
+											</tr>
+										</thead>
+										<tbody>
+											<tr>
+												<td>0001</td>
+												<td>Product Name 1</td>
+												<td>Customer 1</td>
+												<td>Complete</td>
+											</tr>
+											<tr>
+												<td>0002</td>
+												<td>Product Name 2</td>
+												<td>Customer 2</td>
+												<td>Complete</td>
+											</tr>
+											<tr>
+												<td>0003</td>
+												<td>Product Name 3</td>
+												<td>Customer 3</td>
+												<td>Processing</td>
+											</tr>
+											<tr>
+												<td>0004</td>
+												<td>Product Name 4</td>
+												<td>Customer 4</td>
+												<td>Pending</td>
+											</tr>
+										</tbody>
+									</table>
+								</div>
+							</div>
+						</div>
+						<div class="card mb-4">
+							<div class="card-block">
+								<h3 class="card-title">Articles</h3>
+								<div class="dropdown card-title-btn-container">
+									<button class="btn btn-sm btn-subtle" type="button"><em class="fa fa-list-ul"></em> View All</button>
+									<button class="btn btn-sm btn-subtle dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><em class="fa fa-cog"></em></button>
+									<div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenuButton"><a class="dropdown-item" href="#"><em class="fa fa-search mr-1"></em> More info</a>
+										<a class="dropdown-item" href="#"><em class="fa fa-thumb-tack mr-1"></em> Pin Window</a>
+										<a class="dropdown-item" href="#"><em class="fa fa-remove mr-1"></em> Close Window</a></div>
+									</div>
+									<h6 class="card-subtitle mb-2 text-muted">Latest news</h6>
+									<div class="divider" style="margin-top: 1rem;"></div>
+									<div class="articles-container">
+										<div class="article border-bottom">
+											<div class="col-xs-12">
+												<div class="row">
+													<div class="col-2 date">
+														<div class="large">30</div>
+														<div class="text-muted">Jun</div>
+													</div>
+													<div class="col-10">
+														<h4><a href="#">Lorem ipsum dolor sit amet</a></h4>
+														<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer at sodales nisl. Donec malesuada orci ornare risus finibus feugiat.</p>
+													</div>
+												</div>
+											</div>
+											<div class="clear"></div>
+										</div><!--End .article-->
+										
+										<div class="article">
+											<div class="col-xs-12">
+												<div class="row">
+													<div class="col-2 date">
+														<div class="large">30</div>
+														<div class="text-muted">Jun</div>
+													</div>
+													<div class="col-10">
+														<h4><a href="#">Lorem ipsum dolor sit amet</a></h4>
+														<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer at sodales nisl. Donec malesuada orci ornare risus finibus feugiat.</p>
+													</div>
+												</div>
+											</div>
+											<div class="clear"></div>
+										</div><!--End .article-->
+										
+										<div class="article">
+											<div class="col-xs-12">
+												<div class="row">
+													<div class="col-2 date">
+														<div class="large">30</div>
+														<div class="text-muted">Jun</div>
+													</div>
+													<div class="col-10">
+														<h4><a href="#">Lorem ipsum dolor sit amet</a></h4>
+														<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer at sodales nisl. Donec malesuada orci ornare risus finibus feugiat.</p>
+													</div>
+												</div>
+											</div>
+											<div class="clear"></div>
+										</div><!--End .article-->
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="col-md-12 col-lg-4">
+							<div class="card mb-4">
+								<div class="card-block">
+									<div id="calendar"></div>
+									<div class="divider"></div>
+									<h3 class="card-title">Timeline</h3>
+									<h6 class="card-subtitle mb-2 text-muted">What's coming up</h6>
+									<ul class="timeline">
+										<li>
+											<div class="timeline-badge"><em class="fa fa-camera"></em></div>
+											<div class="timeline-panel">
+												<div class="timeline-heading">
+													<h5 class="timeline-title mt-2">Lorem ipsum</h5>
+												</div>
+												<div class="timeline-body">
+													<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+												</div>
+											</div>
+										</li>
+										<li>
+											<div class="timeline-badge primary"><em class="fa fa-link"></em></div>
+											<div class="timeline-panel">
+												<div class="timeline-heading">
+													<h5 class="timeline-title mt-2">Dolor</h5>
+												</div>
+												<div class="timeline-body">
+													<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+												</div>
+											</div>
+										</li>
+										<li>
+											<div class="timeline-badge"><em class="fa fa-paperclip"></em></div>
+											<div class="timeline-panel">
+												<div class="timeline-heading">
+													<h5 class="timeline-title mt-2">Sit amet</h5>
+												</div>
+												<div class="timeline-body">
+													<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+												</div>
+											</div>
+										</li>
+									</ul>
+								</div>
+							</div>
+							<div class="card mb-4">
+								<div class="card-block">
+									<h3 class="card-title">Todo List</h3>
+									<div class="dropdown card-title-btn-container">
+										<button class="btn btn-sm btn-subtle dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><em class="fa fa-cog"></em></button>
+										<div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenuButton"><a class="dropdown-item" href="#"><em class="fa fa-search mr-1"></em> More info</a>
+											<a class="dropdown-item" href="#"><em class="fa fa-thumb-tack mr-1"></em> Pin Window</a>
+											<a class="dropdown-item" href="#"><em class="fa fa-remove mr-1"></em> Close Window</a></div>
+										</div>
+										<h6 class="card-subtitle mb-2 text-muted">A simple checklist</h6>
+										<ul class="todo-list mt-2">
+											<li class="todo-list-item">
+												<div class="checkbox mt-1 mb-2">
+													<label class="custom-control custom-checkbox">
+														<input checked type="checkbox" class="custom-control-input"><span class="custom-control-indicator"></span>
+														<span class="custom-control-description">Make Coffee</span></label>
+														<div class="float-right action-buttons"><a href="#" class="trash"><em class="fa fa-trash"></em></a></div>
+													</div>
+												</li>
+												<li class="todo-list-item">
+													<div class="checkbox mt-1 mb-2">
+														<label class="custom-control custom-checkbox">
+															<input type="checkbox" class="custom-control-input"><span class="custom-control-indicator"></span>
+															<span class="custom-control-description">Check emails</span></label>
+															<div class="float-right action-buttons"><a href="#" class="trash"><em class="fa fa-trash"></em></a></div>
+														</div>
+													</li>
+													<li class="todo-list-item">
+														<div class="checkbox mt-1 mb-2">
+															<label class="custom-control custom-checkbox">
+																<input type="checkbox" class="custom-control-input"><span class="custom-control-indicator"></span>
+																<span class="custom-control-description">Reply to Jane</span></label>
+																<div class="float-right action-buttons"><a href="#" class="trash"><em class="fa fa-trash"></em></a></div>
+															</div>
+														</li>
+														<li class="todo-list-item">
+															<div class="checkbox mt-1 mb-2">
+																<label class="custom-control custom-checkbox">
+																	<input checked type="checkbox" class="custom-control-input"><span class="custom-control-indicator"></span>
+																	<span class="custom-control-description">Work on the new design</span></label>
+																	<div class="float-right action-buttons"><a href="#" class="trash"><em class="fa fa-trash"></em></a></div>
+																</div>
+															</li>
+															<li class="todo-list-item">
+																<div class="checkbox mt-1 mb-2">
+																	<label class="custom-control custom-checkbox">
+																		<input type="checkbox" class="custom-control-input"><span class="custom-control-indicator"></span>
+																		<span class="custom-control-description">Get feedback</span></label>
+																		<div class="float-right action-buttons"><a href="#" class="trash"><em class="fa fa-trash"></em></a></div>
+																	</div>
+																</li>
+															</ul>
+															<div class="card-footer todo-list-footer">
+																<div class="input-group">
+																	<input id="btn-input" type="text" class="form-control input-md" placeholder="Add new task" /><span class="input-group-btn">
+																		<button class="btn btn-primary btn-md" id="btn-todo">Add</button>
+																	</span></div>
+																</div>
+															</div>
+														</div>
+													</div>
+												</section>
+												<section class="row">
+													<div class="col-12 mt-1 mb-4">Template by <a href="https://www.medialoot.com">Medialoot</a></div>
+												</section>
+											</div>
+										</section>
 
-        <!-- Styles -->
-        <style>
-            html, body {
-                background-color: #fff;
-                color: #636b6f;
-                font-family: 'Raleway', sans-serif;
-                font-weight: 100;
-                height: 100vh;
-                margin: 0;
-            }
-
-            .full-height {
-                height: 100vh;
-            }
-
-            .flex-center {
-                align-items: center;
-                display: flex;
-                justify-content: center;
-            }
-
-            .position-ref {
-                position: relative;
-            }
-
-            .top-right {
-                position: absolute;
-                right: 10px;
-                top: 18px;
-            }
-
-            .content {
-                text-align: center;
-            }
-
-            .title {
-                font-size: 84px;
-            }
-
-            .links > a {
-                color: #636b6f;
-                padding: 0 25px;
-                font-size: 12px;
-                font-weight: 600;
-                letter-spacing: .1rem;
-                text-decoration: none;
-                text-transform: uppercase;
-            }
-
-            .m-b-md {
-                margin-bottom: 30px;
-            }
-        </style>
-    </head>
-    <body>
-        <div class="flex-center position-ref full-height">
-            @if (Route::has('login'))
-                <div class="top-right links">
-                    @auth
-                        <a href="{{ url('/home') }}">Home</a>
-                    @else
-                        <a href="{{ route('login') }}">Login</a>
-                        <a href="{{ route('register') }}">Register</a>
-                    @endauth
-                </div>
-            @endif
-
-            <div class="content">
-                <div class="title m-b-md">
-                    Laravel
-                </div>
-
-                <div class="links">
-                    <a href="https://laravel.com/docs">Documentation</a>
-                    <a href="https://laracasts.com">Laracasts</a>
-                    <a href="https://laravel-news.com">News</a>
-                    <a href="https://forge.laravel.com">Forge</a>
-                    <a href="https://github.com/laravel/laravel">GitHub</a>
-                </div>
-            </div>
-        </div>
-    </body>
-</html>
+@endsection
