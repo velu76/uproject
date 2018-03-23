@@ -4,13 +4,13 @@
 	<a href="#menu-toggle" class="btn btn-default" id="menu-toggle"><em class="fa fa-bars"></em></a>
 	<ul class="nav nav-pills flex-column sidebar-nav">
 		<li class="nav-item">
-			<a class="nav-link active" href="{{url('/')}}">
+			<a class="nav-link @yield('dashboard')" href="{{url('/')}}">
 				<em class="fa fa-dashboard"></em> Dashboard <span class="sr-only">(current)</span>
 			</a>
 		</li>
 
 		<li class="nav-item">
-			<a class="nav-link" href="{{route('bids')}}"><em class="fa fa-hand-o-up"></em>Bids
+			<a class="nav-link @yield('bids')" href="{{route('bids')}}"><em class="fa fa-hand-o-up"></em>Bids
 			</a>
 		</li>
 

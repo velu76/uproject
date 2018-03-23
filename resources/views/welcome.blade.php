@@ -1,6 +1,10 @@
 @extends('layouts.admin')
 
+{{-- Set the page title --}}
 @section('page_title','Dashboard')
+{{-- Set the nav class active for this page --}}
+@section('dashboard', 'active')
+
 @section('content')
 <section class="row">
 	<div class="col-sm-12">
