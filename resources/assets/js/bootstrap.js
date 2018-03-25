@@ -8,7 +8,11 @@ import Vue from 'vue';
 import axios from 'axios';
 import flatPickr from 'vue-flatpickr-component';
 import 'flatpickr/dist/flatpickr.css';
+import VeeValidate from 'vee-validate';
+
 Vue.use(flatPickr);
+Vue.use(VeeValidate);
+
 window.axios = require('axios');
 
 window.axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';

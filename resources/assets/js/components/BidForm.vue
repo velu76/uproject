@@ -1,6 +1,6 @@
 <template>
 	<div>
-		<form>
+		<form @submit.prevent="submitForm">
 			<div class="form-group">
 				<label>Title</label>
 				<input class="form-control" id="title"> </input>
@@ -16,8 +16,10 @@
 				<flat-pickr
 					v-model="sdate"
 					class="form-control"
-					:config="config"
-					name="startdate">
+					:config="config.start"
+					name="startdate"
+					@on-change="onStartChange"
+					>
 				</flat-pickr>
 			</div>
 
@@ -26,11 +28,13 @@
 				<flat-pickr
 					v-model="edate"
 					class="form-control"
-					:config="config"
-					name="enddate">
+					:config="config.end"
+					name="enddate"					
+					@on-change="onEndChange">
 				</flat-pickr>
+				<span v-show="errors.has('endate')" class="help is-danger">{{ errors.first('enddate') }}</span>
 			</div>
-
+<!-- v-validate="'after:startdate'" -->
 		</form>
 	</div>
 </template>
@@ -43,12 +47,34 @@ export default {
 			edate: new Date(),		
 
 			config: {
-				dateFormat: 'd-m-Y',
-				altInput: true,
-				wrap:true,				
-			}	
+
+				start: {
+					dateFormat: 'd-m-Y',
+					altInput: true,
+					wrap:true,
+					minDate: null,
+					maxDate: null				
+				},
+
+				end: {
+					dateFormat: 'd-m-Y',
+					altInput: true,
+					wrap:true,	
+					minDate: null						
+				}				
+			},	
 		}
 	},
+
+	methods: {
+		onStartChange(selectedDates,dateStr,instance) {			
+			this.$set(this.config.end, 'minDate', dateStr);
+		},
+
+		onEndChange(selectedDates, dateStr,instance) {
+			this.$set(this.config.start, 'maxDate', dateStr);
+		}
+	}
 
 }
 
