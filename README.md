@@ -14,7 +14,7 @@ Micro-project (uProject) was created out of the need to manage project documents
 uProject is powered by:
  1. Laravel 5.6 
  2. Vue JS 2.0
- 3. Bootstrap V4.0
+ 3. Bootstrap 4.0
  4. Database => You can choose whatever database that Laravel supports
  5. 3rd Party Open source libraries / modules for Vue
 
