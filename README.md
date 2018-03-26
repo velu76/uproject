@@ -53,4 +53,23 @@ Bids consists of the following a set of forms:
         <li>Contract Sum [ $, 2 decimal places ]</li>
         <li>Project Cost / Value [ Estimated, $, 2 decimal places ]</li>          
        </ul>
-   
+    <li>Legal Details </li>
+      <ul> 
+        <li>Contract Agreement [ <i>still in design</i> ]</li> 
+        <li>Letter of Completion [ <i>still in design</i> ]</li>         
+        <li>Customer Satisfication Survey Form [ <i>still in design</i> ]</li>
+        <li>Vendor Evaluation Form [ <i>still in design</i> ]</li>          
+       </ul>
+    <li>Status Details </li>
+      <ul> 
+        <li>Remarks [ Large Text Area ]</li> 
+        <li>Bid Status [ Sucess, Not Success ]</li>         
+       </ul>
+    <li>Document Details </li>
+      <ul> 
+        <li>Contents Page [ <i>still in design</i> ]</li> 
+        <li>Submitted Documents [ <i>still in design</i> ]</li>         
+        <li>Budget Details [ <i>still in design</i> ]</li>
+        <li>Status [ <i>still in design</i> ]</li>                  
+       </ul>
+</ol>
