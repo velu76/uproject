@@ -1,87 +1,71 @@
 <template>
 	<div>
-		<form @submit.prevent="submitForm">
-			<div class="form-group">
-				<label>Title</label>
-				<input class="form-control" 
-						id="title" 
-						v-validate="{required:true}"
-						:class="{'is-invalid' : errors.has('title')}"> </input>
+		<form @submit.prevent>
+		<div class="accordian">
+			<div class="card">
+				<div class="card-header">
+					<h5 class="mb-0">
+						<button class="btn btn-link" @click="bidToggle = !bidToggle"> 
+							Bid Details
+						</button>
+					</h5>
+				</div>
+
+				<div class="collapse" :class="{ 'show' : bidToggle }" v-model="bidToggle" >
+					<div class="card-body">
+						<details-form></details-form>
+					</div>
+				</div>
 			</div>
 
-			<div class="form-group">
-				<label>Bid ID / Number</label>
-				<input class="form-control" id="bidId" v-validate="{required:true}"> </input>
+			<div class="card">
+				<div class="card-header">
+					<h5 class="mb-0">
+						<button class="btn btn-link" @click="trackToggle = !trackToggle">
+							Tracking Details
+						</button>
+					</h5>
+				</div>
+
+				<div class="collapse" :class="{'show' : trackToggle}" v-model="trackToggle">
+					<div class="card-body">
+						<tracking-form></tracking-form>					
+					</div>
+				</div>
 			</div>
 
-			<div class="form-group">
-				<label>Start Date</label>
-				<flat-pickr
-					v-model="sdate"
-					class="form-control"
-					:config="config.start"
-					name="startdate"
-					@on-change="onStartChange">
-				</flat-pickr>
-			</div>
 
-			<div class="form-group">
-				<label>Expected End Date</label>
-				<flat-pickr
-					v-model="edate"
-					class="form-control"
-					:config="config.end"
-					name="enddate"					
-					@on-change="onEndChange">
-				</flat-pickr>
-				<span v-show="errors.has('endate')" class="help is-danger">{{ errors.first('enddate') }}</span>
-			</div>
+		</div>
+			
 <!-- v-validate="'after:startdate'" -->
 		</form>
 	</div>
 </template>
 
 <script>
+import DetailsForm from './forms_partial/bids/DetailsForm';
+import TrackingForm from './forms_partial/bids/TrackingForm';
+
 export default {
+	components: {
+		DetailsForm,
+		TrackingForm
+	},
+
 	data () {
 		return {
-			sdate: new Date(),		
-			edate: new Date(),		
-
-			config: {
-
-				start: {
-					dateFormat: 'd-m-Y',
-					altInput: true,
-					wrap:true,
-					minDate: null,
-					maxDate: null				
-				},
-
-				end: {
-					dateFormat: 'd-m-Y',
-					altInput: true,
-					wrap:true,	
-					minDate: null						
-				}				
-			},	
-		}
+		
+			// Accordian
+			bidToggle: false,
+			trackToggle: false
+		};
 	},
 
 	methods: {
-		onStartChange(selectedDates,dateStr,instance) {			
-			this.$set(this.config.end, 'minDate', dateStr);
-		},
-
-		onEndChange(selectedDates, dateStr,instance) {
-			this.$set(this.config.start, 'maxDate', dateStr);
-		}
 	}
 
 }
-
 </script>
 
 <style>
-	
 </style>
