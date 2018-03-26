@@ -3,12 +3,15 @@
 		<form @submit.prevent="submitForm">
 			<div class="form-group">
 				<label>Title</label>
-				<input class="form-control" id="title"> </input>
+				<input class="form-control" 
+						id="title" 
+						v-validate="{required:true}"
+						:class="{'is-invalid' : errors.has('title')}"> </input>
 			</div>
 
 			<div class="form-group">
 				<label>Bid ID / Number</label>
-				<input class="form-control" id="bidId"> </input>
+				<input class="form-control" id="bidId" v-validate="{required:true}"> </input>
 			</div>
 
 			<div class="form-group">
@@ -18,8 +21,7 @@
 					class="form-control"
 					:config="config.start"
 					name="startdate"
-					@on-change="onStartChange"
-					>
+					@on-change="onStartChange">
 				</flat-pickr>
 			</div>
 
