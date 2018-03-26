@@ -98,6 +98,69 @@
 				</div>
 			</div>
 
+			<div class="card">
+				<div class="card-header">
+					<h5 class="mb-0">
+						<button class="btn btn-link" @click="financeToggle = !financeToggle">
+							Finance Details
+						</button>
+					</h5>
+				</div>
+
+				<div class="collapse" :class="{'show' : financeToggle}" v-model="financeToggle">
+					<div class="card-body">
+						<finance-form></finance-form>					
+					</div>
+				</div>
+			</div>
+
+			<div class="card">
+				<div class="card-header">
+					<h5 class="mb-0">
+						<button class="btn btn-link" @click="legalToggle = !legalToggle">
+							Legal Details
+						</button>
+					</h5>
+				</div>
+
+				<div class="collapse" :class="{'show' : legalToggle}" v-model="legalToggle">
+					<div class="card-body">
+						<legal-form></legal-form>					
+					</div>
+				</div>
+			</div>
+
+			<div class="card">
+				<div class="card-header">
+					<h5 class="mb-0">
+						<button class="btn btn-link" @click="statusToggle = !statusToggle">
+							Status Details
+						</button>
+					</h5>
+				</div>
+
+				<div class="collapse" :class="{'show' : statusToggle}" v-model="statusToggle">
+					<div class="card-body">
+						<status-form></status-form>					
+					</div>
+				</div>
+			</div>
+
+			<div class="card">
+				<div class="card-header">
+					<h5 class="mb-0">
+						<button class="btn btn-link" @click="documentsToggle = !documentsToggle">
+							Documents Details
+						</button>
+					</h5>
+				</div>
+
+				<div class="collapse" :class="{'show' : documentsToggle}" v-model="documentsToggle">
+					<div class="card-body">
+						<documents-form></documents-form>					
+					</div>
+				</div>
+			</div>
 
 		</div>
 			
@@ -114,6 +177,10 @@ import BudgetForm from './forms_partial/bids/BudgetForm';
 import ClientForm from './forms_partial/bids/ClientForm';
 import TeamForm from './forms_partial/bids/TeamForm';
 import ExternalsForm from './forms_partial/bids/ExternalsForm';
+import FinanceForm from './forms_partial/bids/FinanceForm';
+import LegalForm from './forms_partial/bids/LegalForm';
+import StatusForm from './forms_partial/bids/StatusForm';
+import DocumentsForm from './forms_partial/bids/DocumentsForm';
 
 export default {
 	components: {
@@ -122,7 +189,11 @@ export default {
 		BudgetForm,
 		ClientForm,
 		TeamForm,
-		ExternalsForm
+		ExternalsForm,
+		FinanceForm,
+		LegalForm,
+		StatusForm,
+		DocumentsForm
 	},
 
 	data () {
@@ -135,6 +206,10 @@ export default {
 			clientToggle: false,
 			teamToggle: false,
 			externalsToggle: false,
+			financeToggle: false,
+			legalToggle: false,
+			statusToggle: false,
+			documentsToggle: false,
 		};
 	},
 

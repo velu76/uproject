@@ -23508,7 +23508,7 @@ exports = module.exports = __webpack_require__(11)(false);
 
 
 // module
-exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n", ""]);
+exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n", ""]);
 
 // exports
 
@@ -23792,6 +23792,77 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__forms_partial_bids_TeamForm___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_4__forms_partial_bids_TeamForm__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__forms_partial_bids_ExternalsForm__ = __webpack_require__(76);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__forms_partial_bids_ExternalsForm___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_5__forms_partial_bids_ExternalsForm__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__forms_partial_bids_FinanceForm__ = __webpack_require__(79);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__forms_partial_bids_FinanceForm___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_6__forms_partial_bids_FinanceForm__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__forms_partial_bids_LegalForm__ = __webpack_require__(81);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__forms_partial_bids_LegalForm___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_7__forms_partial_bids_LegalForm__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__forms_partial_bids_StatusForm__ = __webpack_require__(83);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__forms_partial_bids_StatusForm___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_8__forms_partial_bids_StatusForm__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__forms_partial_bids_DocumentsForm__ = __webpack_require__(85);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__forms_partial_bids_DocumentsForm___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_9__forms_partial_bids_DocumentsForm__);
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 //
 //
 //
@@ -23909,6 +23980,10 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 
 
 
+
+
+
+
 /* harmony default export */ __webpack_exports__["default"] = ({
 	components: {
 		DetailsForm: __WEBPACK_IMPORTED_MODULE_0__forms_partial_bids_DetailsForm___default.a,
@@ -23916,7 +23991,11 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 		BudgetForm: __WEBPACK_IMPORTED_MODULE_2__forms_partial_bids_BudgetForm___default.a,
 		ClientForm: __WEBPACK_IMPORTED_MODULE_3__forms_partial_bids_ClientForm___default.a,
 		TeamForm: __WEBPACK_IMPORTED_MODULE_4__forms_partial_bids_TeamForm___default.a,
-		ExternalsForm: __WEBPACK_IMPORTED_MODULE_5__forms_partial_bids_ExternalsForm___default.a
+		ExternalsForm: __WEBPACK_IMPORTED_MODULE_5__forms_partial_bids_ExternalsForm___default.a,
+		FinanceForm: __WEBPACK_IMPORTED_MODULE_6__forms_partial_bids_FinanceForm___default.a,
+		LegalForm: __WEBPACK_IMPORTED_MODULE_7__forms_partial_bids_LegalForm___default.a,
+		StatusForm: __WEBPACK_IMPORTED_MODULE_8__forms_partial_bids_StatusForm___default.a,
+		DocumentsForm: __WEBPACK_IMPORTED_MODULE_9__forms_partial_bids_DocumentsForm___default.a
 	},
 
 	data: function data() {
@@ -23928,7 +24007,11 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 			budgetToggle: false,
 			clientToggle: false,
 			teamToggle: false,
-			externalsToggle: false
+			externalsToggle: false,
+			financeToggle: false,
+			legalToggle: false,
+			statusToggle: false,
+			documentsToggle: false
 		};
 	},
 
@@ -24182,6 +24265,153 @@ var render = function() {
                   "div",
                   { staticClass: "card-body" },
                   [_c("externals-form")],
+                  1
+                )
+              ]
+            )
+          ]),
+          _vm._v(" "),
+          _c("div", { staticClass: "card" }, [
+            _c("div", { staticClass: "card-header" }, [
+              _c("h5", { staticClass: "mb-0" }, [
+                _c(
+                  "button",
+                  {
+                    staticClass: "btn btn-link",
+                    on: {
+                      click: function($event) {
+                        _vm.financeToggle = !_vm.financeToggle
+                      }
+                    }
+                  },
+                  [_vm._v("\n\t\t\t\t\t\t\tFinance Details\n\t\t\t\t\t\t")]
+                )
+              ])
+            ]),
+            _vm._v(" "),
+            _c(
+              "div",
+              {
+                staticClass: "collapse",
+                class: { show: _vm.financeToggle },
+                model: {
+                  value: _vm.financeToggle,
+                  callback: function($$v) {
+                    _vm.financeToggle = $$v
+                  },
+                  expression: "financeToggle"
+                }
+              },
+              [_c("div", { staticClass: "card-body" }, [_c("finance-form")], 1)]
+            )
+          ]),
+          _vm._v(" "),
+          _c("div", { staticClass: "card" }, [
+            _c("div", { staticClass: "card-header" }, [
+              _c("h5", { staticClass: "mb-0" }, [
+                _c(
+                  "button",
+                  {
+                    staticClass: "btn btn-link",
+                    on: {
+                      click: function($event) {
+                        _vm.legalToggle = !_vm.legalToggle
+                      }
+                    }
+                  },
+                  [_vm._v("\n\t\t\t\t\t\t\tLegal Details\n\t\t\t\t\t\t")]
+                )
+              ])
+            ]),
+            _vm._v(" "),
+            _c(
+              "div",
+              {
+                staticClass: "collapse",
+                class: { show: _vm.legalToggle },
+                model: {
+                  value: _vm.legalToggle,
+                  callback: function($$v) {
+                    _vm.legalToggle = $$v
+                  },
+                  expression: "legalToggle"
+                }
+              },
+              [_c("div", { staticClass: "card-body" }, [_c("legal-form")], 1)]
+            )
+          ]),
+          _vm._v(" "),
+          _c("div", { staticClass: "card" }, [
+            _c("div", { staticClass: "card-header" }, [
+              _c("h5", { staticClass: "mb-0" }, [
+                _c(
+                  "button",
+                  {
+                    staticClass: "btn btn-link",
+                    on: {
+                      click: function($event) {
+                        _vm.statusToggle = !_vm.statusToggle
+                      }
+                    }
+                  },
+                  [_vm._v("\n\t\t\t\t\t\t\tStatus Details\n\t\t\t\t\t\t")]
+                )
+              ])
+            ]),
+            _vm._v(" "),
+            _c(
+              "div",
+              {
+                staticClass: "collapse",
+                class: { show: _vm.statusToggle },
+                model: {
+                  value: _vm.statusToggle,
+                  callback: function($$v) {
+                    _vm.statusToggle = $$v
+                  },
+                  expression: "statusToggle"
+                }
+              },
+              [_c("div", { staticClass: "card-body" }, [_c("status-form")], 1)]
+            )
+          ]),
+          _vm._v(" "),
+          _c("div", { staticClass: "card" }, [
+            _c("div", { staticClass: "card-header" }, [
+              _c("h5", { staticClass: "mb-0" }, [
+                _c(
+                  "button",
+                  {
+                    staticClass: "btn btn-link",
+                    on: {
+                      click: function($event) {
+                        _vm.documentsToggle = !_vm.documentsToggle
+                      }
+                    }
+                  },
+                  [_vm._v("\n\t\t\t\t\t\t\tDocuments Details\n\t\t\t\t\t\t")]
+                )
+              ])
+            ]),
+            _vm._v(" "),
+            _c(
+              "div",
+              {
+                staticClass: "collapse",
+                class: { show: _vm.documentsToggle },
+                model: {
+                  value: _vm.documentsToggle,
+                  callback: function($$v) {
+                    _vm.documentsToggle = $$v
+                  },
+                  expression: "documentsToggle"
+                }
+              },
+              [
+                _c(
+                  "div",
+                  { staticClass: "card-body" },
+                  [_c("documents-form")],
                   1
                 )
               ]
@@ -25444,6 +25674,489 @@ if (false) {
   module.hot.accept()
   if (module.hot.data) {
     require("vue-hot-reload-api")      .rerender("data-v-1485cef0", module.exports)
+  }
+}
+
+/***/ }),
+/* 79 */
+/***/ (function(module, exports, __webpack_require__) {
+
+var disposed = false
+var normalizeComponent = __webpack_require__(12)
+/* script */
+var __vue_script__ = null
+/* template */
+var __vue_template__ = __webpack_require__(80)
+/* template functional */
+var __vue_template_functional__ = false
+/* styles */
+var __vue_styles__ = null
+/* scopeId */
+var __vue_scopeId__ = null
+/* moduleIdentifier (server only) */
+var __vue_module_identifier__ = null
+var Component = normalizeComponent(
+  __vue_script__,
+  __vue_template__,
+  __vue_template_functional__,
+  __vue_styles__,
+  __vue_scopeId__,
+  __vue_module_identifier__
+)
+Component.options.__file = "resources/assets/js/components/forms_partial/bids/FinanceForm.vue"
+
+/* hot reload */
+if (false) {(function () {
+  var hotAPI = require("vue-hot-reload-api")
+  hotAPI.install(require("vue"), false)
+  if (!hotAPI.compatible) return
+  module.hot.accept()
+  if (!module.hot.data) {
+    hotAPI.createRecord("data-v-0516d15a", Component.options)
+  } else {
+    hotAPI.reload("data-v-0516d15a", Component.options)
+  }
+  module.hot.dispose(function (data) {
+    disposed = true
+  })
+})()}
+
+module.exports = Component.exports
+
+
+/***/ }),
+/* 80 */
+/***/ (function(module, exports, __webpack_require__) {
+
+var render = function() {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+  return _c("div", [
+    _vm._m(0),
+    _vm._v(" "),
+    _c("div", { staticClass: "form-group" }, [
+      _c("label", [_vm._v("Actual Fee")]),
+      _vm._v(" "),
+      _c("input", {
+        directives: [
+          {
+            name: "model",
+            rawName: "v-model",
+            value: _vm.actualFee,
+            expression: "actualFee"
+          },
+          {
+            name: "validate",
+            rawName: "v-validate",
+            value: { required: true },
+            expression: "{required:true}"
+          }
+        ],
+        staticClass: "form-control",
+        class: { "is-invalid": _vm.errors.has("actualFee") },
+        attrs: { id: "actualFee" },
+        domProps: { value: _vm.actualFee },
+        on: {
+          input: function($event) {
+            if ($event.target.composing) {
+              return
+            }
+            _vm.actualFee = $event.target.value
+          }
+        }
+      })
+    ]),
+    _vm._v(" "),
+    _c("div", { staticClass: "form-group" }, [
+      _c("label", [_vm._v("Contract Sum")]),
+      _vm._v(" "),
+      _c("input", {
+        directives: [
+          {
+            name: "model",
+            rawName: "v-model",
+            value: _vm.contractSum,
+            expression: "contractSum"
+          },
+          {
+            name: "validate",
+            rawName: "v-validate",
+            value: { required: true },
+            expression: "{required:true}"
+          }
+        ],
+        staticClass: "form-control",
+        class: { "is-invalid": _vm.errors.has("contractSum") },
+        attrs: { id: "contractSum" },
+        domProps: { value: _vm.contractSum },
+        on: {
+          input: function($event) {
+            if ($event.target.composing) {
+              return
+            }
+            _vm.contractSum = $event.target.value
+          }
+        }
+      })
+    ]),
+    _vm._v(" "),
+    _c("div", { staticClass: "form-group" }, [
+      _c("label", [_vm._v("Project Cost / Value (Est)")]),
+      _vm._v(" "),
+      _c("input", {
+        directives: [
+          {
+            name: "model",
+            rawName: "v-model",
+            value: _vm.value,
+            expression: "value"
+          },
+          {
+            name: "validate",
+            rawName: "v-validate",
+            value: { required: true },
+            expression: "{required:true}"
+          }
+        ],
+        staticClass: "form-control",
+        class: { "is-invalid": _vm.errors.has("value") },
+        attrs: { id: "value" },
+        domProps: { value: _vm.value },
+        on: {
+          input: function($event) {
+            if ($event.target.composing) {
+              return
+            }
+            _vm.value = $event.target.value
+          }
+        }
+      })
+    ])
+  ])
+}
+var staticRenderFns = [
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "form-group" }, [
+      _c("label", [_vm._v("Currency used")]),
+      _vm._v(" "),
+      _c("select", { staticClass: "form-control" }, [
+        _c("option", [_vm._v("Singapore Dollar (SGD)")]),
+        _vm._v(" "),
+        _c("option", [_vm._v("US Dollar (USD)")]),
+        _vm._v(" "),
+        _c("option", [_vm._v("Chinese Renembi (CYR)")]),
+        _vm._v(" "),
+        _c("option", [_vm._v("Euro (EUR)")])
+      ])
+    ])
+  }
+]
+render._withStripped = true
+module.exports = { render: render, staticRenderFns: staticRenderFns }
+if (false) {
+  module.hot.accept()
+  if (module.hot.data) {
+    require("vue-hot-reload-api")      .rerender("data-v-0516d15a", module.exports)
+  }
+}
+
+/***/ }),
+/* 81 */
+/***/ (function(module, exports, __webpack_require__) {
+
+var disposed = false
+var normalizeComponent = __webpack_require__(12)
+/* script */
+var __vue_script__ = null
+/* template */
+var __vue_template__ = __webpack_require__(82)
+/* template functional */
+var __vue_template_functional__ = false
+/* styles */
+var __vue_styles__ = null
+/* scopeId */
+var __vue_scopeId__ = null
+/* moduleIdentifier (server only) */
+var __vue_module_identifier__ = null
+var Component = normalizeComponent(
+  __vue_script__,
+  __vue_template__,
+  __vue_template_functional__,
+  __vue_styles__,
+  __vue_scopeId__,
+  __vue_module_identifier__
+)
+Component.options.__file = "resources/assets/js/components/forms_partial/bids/LegalForm.vue"
+
+/* hot reload */
+if (false) {(function () {
+  var hotAPI = require("vue-hot-reload-api")
+  hotAPI.install(require("vue"), false)
+  if (!hotAPI.compatible) return
+  module.hot.accept()
+  if (!module.hot.data) {
+    hotAPI.createRecord("data-v-e515738e", Component.options)
+  } else {
+    hotAPI.reload("data-v-e515738e", Component.options)
+  }
+  module.hot.dispose(function (data) {
+    disposed = true
+  })
+})()}
+
+module.exports = Component.exports
+
+
+/***/ }),
+/* 82 */
+/***/ (function(module, exports, __webpack_require__) {
+
+var render = function() {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+  return _vm._m(0)
+}
+var staticRenderFns = [
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", [
+      _c("p", [_vm._v("File Links:")]),
+      _vm._v(" "),
+      _c("ul", [
+        _c("li", [_vm._v("Contract Agreement")]),
+        _vm._v(" "),
+        _c("li", [_vm._v("Letter of Completion")]),
+        _vm._v(" "),
+        _c("li", [_vm._v("Customer Satification Survey Form")]),
+        _vm._v(" "),
+        _c("li", [_vm._v("Vendor Evaluation Form")])
+      ])
+    ])
+  }
+]
+render._withStripped = true
+module.exports = { render: render, staticRenderFns: staticRenderFns }
+if (false) {
+  module.hot.accept()
+  if (module.hot.data) {
+    require("vue-hot-reload-api")      .rerender("data-v-e515738e", module.exports)
+  }
+}
+
+/***/ }),
+/* 83 */
+/***/ (function(module, exports, __webpack_require__) {
+
+var disposed = false
+var normalizeComponent = __webpack_require__(12)
+/* script */
+var __vue_script__ = null
+/* template */
+var __vue_template__ = __webpack_require__(84)
+/* template functional */
+var __vue_template_functional__ = false
+/* styles */
+var __vue_styles__ = null
+/* scopeId */
+var __vue_scopeId__ = null
+/* moduleIdentifier (server only) */
+var __vue_module_identifier__ = null
+var Component = normalizeComponent(
+  __vue_script__,
+  __vue_template__,
+  __vue_template_functional__,
+  __vue_styles__,
+  __vue_scopeId__,
+  __vue_module_identifier__
+)
+Component.options.__file = "resources/assets/js/components/forms_partial/bids/StatusForm.vue"
+
+/* hot reload */
+if (false) {(function () {
+  var hotAPI = require("vue-hot-reload-api")
+  hotAPI.install(require("vue"), false)
+  if (!hotAPI.compatible) return
+  module.hot.accept()
+  if (!module.hot.data) {
+    hotAPI.createRecord("data-v-d10c962c", Component.options)
+  } else {
+    hotAPI.reload("data-v-d10c962c", Component.options)
+  }
+  module.hot.dispose(function (data) {
+    disposed = true
+  })
+})()}
+
+module.exports = Component.exports
+
+
+/***/ }),
+/* 84 */
+/***/ (function(module, exports, __webpack_require__) {
+
+var render = function() {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+  return _vm._m(0)
+}
+var staticRenderFns = [
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", [
+      _c("div", { staticClass: "form-group" }, [
+        _c("label", { attrs: { for: "remarks" } }, [_vm._v("Remarks")]),
+        _vm._v(" "),
+        _c("textarea", {
+          staticClass: "form-control",
+          attrs: { id: "remarks", rows: "3" }
+        })
+      ]),
+      _vm._v(" "),
+      _c("div", { staticClass: "form-group" }, [
+        _c("h3", [_vm._v("Project Status")]),
+        _vm._v(" "),
+        _c("div", { staticClass: "form-check" }, [
+          _c("input", {
+            staticClass: "form-check-input",
+            attrs: {
+              type: "radio",
+              name: "success",
+              id: "success",
+              value: "success",
+              checked: ""
+            }
+          }),
+          _vm._v(" "),
+          _c(
+            "label",
+            { staticClass: "form-check-label", attrs: { for: "success" } },
+            [_vm._v("\n\t\t\t\tSuccess\n\t\t\t")]
+          )
+        ]),
+        _vm._v(" "),
+        _c("div", { staticClass: "form-check" }, [
+          _c("input", {
+            staticClass: "form-check-input",
+            attrs: {
+              type: "radio",
+              name: "notSuccess",
+              id: "notSuccess",
+              value: "notSuccess"
+            }
+          }),
+          _vm._v(" "),
+          _c(
+            "label",
+            { staticClass: "form-check-label", attrs: { for: "notSuccess" } },
+            [_vm._v("\n\t\t\t\tNot Success\n\t\t\t")]
+          )
+        ])
+      ])
+    ])
+  }
+]
+render._withStripped = true
+module.exports = { render: render, staticRenderFns: staticRenderFns }
+if (false) {
+  module.hot.accept()
+  if (module.hot.data) {
+    require("vue-hot-reload-api")      .rerender("data-v-d10c962c", module.exports)
+  }
+}
+
+/***/ }),
+/* 85 */
+/***/ (function(module, exports, __webpack_require__) {
+
+var disposed = false
+var normalizeComponent = __webpack_require__(12)
+/* script */
+var __vue_script__ = null
+/* template */
+var __vue_template__ = __webpack_require__(86)
+/* template functional */
+var __vue_template_functional__ = false
+/* styles */
+var __vue_styles__ = null
+/* scopeId */
+var __vue_scopeId__ = null
+/* moduleIdentifier (server only) */
+var __vue_module_identifier__ = null
+var Component = normalizeComponent(
+  __vue_script__,
+  __vue_template__,
+  __vue_template_functional__,
+  __vue_styles__,
+  __vue_scopeId__,
+  __vue_module_identifier__
+)
+Component.options.__file = "resources/assets/js/components/forms_partial/bids/DocumentsForm.vue"
+
+/* hot reload */
+if (false) {(function () {
+  var hotAPI = require("vue-hot-reload-api")
+  hotAPI.install(require("vue"), false)
+  if (!hotAPI.compatible) return
+  module.hot.accept()
+  if (!module.hot.data) {
+    hotAPI.createRecord("data-v-2157a538", Component.options)
+  } else {
+    hotAPI.reload("data-v-2157a538", Component.options)
+  }
+  module.hot.dispose(function (data) {
+    disposed = true
+  })
+})()}
+
+module.exports = Component.exports
+
+
+/***/ }),
+/* 86 */
+/***/ (function(module, exports, __webpack_require__) {
+
+var render = function() {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+  return _vm._m(0)
+}
+var staticRenderFns = [
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", [
+      _c("p", [_vm._v("Links to the Documents")]),
+      _vm._v(" "),
+      _c("ul", [
+        _c("li", [_vm._v("Contents Page")]),
+        _vm._v(" "),
+        _c("li", [_vm._v("Submitted Documents")]),
+        _vm._v(" "),
+        _c("li", [_vm._v("Budget Details")]),
+        _vm._v(" "),
+        _c("li", [_vm._v("Status")])
+      ])
+    ])
+  }
+]
+render._withStripped = true
+module.exports = { render: render, staticRenderFns: staticRenderFns }
+if (false) {
+  module.hot.accept()
+  if (module.hot.data) {
+    require("vue-hot-reload-api")      .rerender("data-v-2157a538", module.exports)
   }
 }
 
