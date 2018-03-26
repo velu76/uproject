@@ -38,3 +38,21 @@
 		</div>
 	</div>
 </template>
+
+<script>
+export default {
+
+  name: 'FinanceForm',
+
+  data () {
+    return {
+    	actualFee: 0,
+    	value: 0,
+    	contractSum: 0
+    }
+  }
+}
+</script>
+
+<style lang="css" scoped>
+</style>
