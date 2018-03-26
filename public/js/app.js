@@ -23508,7 +23508,7 @@ exports = module.exports = __webpack_require__(11)(false);
 
 
 // module
-exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n", ""]);
+exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n", ""]);
 
 // exports
 
@@ -23784,6 +23784,14 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__forms_partial_bids_DetailsForm___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0__forms_partial_bids_DetailsForm__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__forms_partial_bids_TrackingForm__ = __webpack_require__(64);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__forms_partial_bids_TrackingForm___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1__forms_partial_bids_TrackingForm__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__forms_partial_bids_BudgetForm__ = __webpack_require__(67);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__forms_partial_bids_BudgetForm___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2__forms_partial_bids_BudgetForm__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__forms_partial_bids_ClientForm__ = __webpack_require__(70);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__forms_partial_bids_ClientForm___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3__forms_partial_bids_ClientForm__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__forms_partial_bids_TeamForm__ = __webpack_require__(73);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__forms_partial_bids_TeamForm___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_4__forms_partial_bids_TeamForm__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__forms_partial_bids_ExternalsForm__ = __webpack_require__(76);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__forms_partial_bids_ExternalsForm___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_5__forms_partial_bids_ExternalsForm__);
 //
 //
 //
@@ -23828,6 +23836,75 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+
+// Import form parts that would be shown as accordian
+
+
+
 
 
 
@@ -23835,7 +23912,11 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony default export */ __webpack_exports__["default"] = ({
 	components: {
 		DetailsForm: __WEBPACK_IMPORTED_MODULE_0__forms_partial_bids_DetailsForm___default.a,
-		TrackingForm: __WEBPACK_IMPORTED_MODULE_1__forms_partial_bids_TrackingForm___default.a
+		TrackingForm: __WEBPACK_IMPORTED_MODULE_1__forms_partial_bids_TrackingForm___default.a,
+		BudgetForm: __WEBPACK_IMPORTED_MODULE_2__forms_partial_bids_BudgetForm___default.a,
+		ClientForm: __WEBPACK_IMPORTED_MODULE_3__forms_partial_bids_ClientForm___default.a,
+		TeamForm: __WEBPACK_IMPORTED_MODULE_4__forms_partial_bids_TeamForm___default.a,
+		ExternalsForm: __WEBPACK_IMPORTED_MODULE_5__forms_partial_bids_ExternalsForm___default.a
 	},
 
 	data: function data() {
@@ -23843,7 +23924,11 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 
 			// Accordian
 			bidToggle: false,
-			trackToggle: false
+			trackToggle: false,
+			budgetToggle: false,
+			clientToggle: false,
+			teamToggle: false,
+			externalsToggle: false
 		};
 	},
 
@@ -23946,6 +24031,157 @@ var render = function() {
                   "div",
                   { staticClass: "card-body" },
                   [_c("tracking-form")],
+                  1
+                )
+              ]
+            )
+          ]),
+          _vm._v(" "),
+          _c("div", { staticClass: "card" }, [
+            _c("div", { staticClass: "card-header" }, [
+              _c("h5", { staticClass: "mb-0" }, [
+                _c(
+                  "button",
+                  {
+                    staticClass: "btn btn-link",
+                    on: {
+                      click: function($event) {
+                        _vm.budgetToggle = !_vm.budgetToggle
+                      }
+                    }
+                  },
+                  [_vm._v("\n\t\t\t\t\t\t\tBudget Details\n\t\t\t\t\t\t")]
+                )
+              ])
+            ]),
+            _vm._v(" "),
+            _c(
+              "div",
+              {
+                staticClass: "collapse",
+                class: { show: _vm.budgetToggle },
+                model: {
+                  value: _vm.budgetToggle,
+                  callback: function($$v) {
+                    _vm.budgetToggle = $$v
+                  },
+                  expression: "budgetToggle"
+                }
+              },
+              [_c("div", { staticClass: "card-body" }, [_c("budget-form")], 1)]
+            )
+          ]),
+          _vm._v(" "),
+          _c("div", { staticClass: "card" }, [
+            _c("div", { staticClass: "card-header" }, [
+              _c("h5", { staticClass: "mb-0" }, [
+                _c(
+                  "button",
+                  {
+                    staticClass: "btn btn-link",
+                    on: {
+                      click: function($event) {
+                        _vm.clientToggle = !_vm.clientToggle
+                      }
+                    }
+                  },
+                  [_vm._v("\n\t\t\t\t\t\t\tClient Details\n\t\t\t\t\t\t")]
+                )
+              ])
+            ]),
+            _vm._v(" "),
+            _c(
+              "div",
+              {
+                staticClass: "collapse",
+                class: { show: _vm.clientToggle },
+                model: {
+                  value: _vm.clientToggle,
+                  callback: function($$v) {
+                    _vm.clientToggle = $$v
+                  },
+                  expression: "clientToggle"
+                }
+              },
+              [_c("div", { staticClass: "card-body" }, [_c("client-form")], 1)]
+            )
+          ]),
+          _vm._v(" "),
+          _c("div", { staticClass: "card" }, [
+            _c("div", { staticClass: "card-header" }, [
+              _c("h5", { staticClass: "mb-0" }, [
+                _c(
+                  "button",
+                  {
+                    staticClass: "btn btn-link",
+                    on: {
+                      click: function($event) {
+                        _vm.teamToggle = !_vm.teamToggle
+                      }
+                    }
+                  },
+                  [_vm._v("\n\t\t\t\t\t\t\tTeam Details\n\t\t\t\t\t\t")]
+                )
+              ])
+            ]),
+            _vm._v(" "),
+            _c(
+              "div",
+              {
+                staticClass: "collapse",
+                class: { show: _vm.teamToggle },
+                model: {
+                  value: _vm.teamToggle,
+                  callback: function($$v) {
+                    _vm.teamToggle = $$v
+                  },
+                  expression: "teamToggle"
+                }
+              },
+              [_c("div", { staticClass: "card-body" }, [_c("team-form")], 1)]
+            )
+          ]),
+          _vm._v(" "),
+          _c("div", { staticClass: "card" }, [
+            _c("div", { staticClass: "card-header" }, [
+              _c("h5", { staticClass: "mb-0" }, [
+                _c(
+                  "button",
+                  {
+                    staticClass: "btn btn-link",
+                    on: {
+                      click: function($event) {
+                        _vm.externalsToggle = !_vm.externalsToggle
+                      }
+                    }
+                  },
+                  [
+                    _vm._v(
+                      "\n\t\t\t\t\t\t\tExternal Parties / Partner Details\n\t\t\t\t\t\t"
+                    )
+                  ]
+                )
+              ])
+            ]),
+            _vm._v(" "),
+            _c(
+              "div",
+              {
+                staticClass: "collapse",
+                class: { show: _vm.externalsToggle },
+                model: {
+                  value: _vm.externalsToggle,
+                  callback: function($$v) {
+                    _vm.externalsToggle = $$v
+                  },
+                  expression: "externalsToggle"
+                }
+              },
+              [
+                _c(
+                  "div",
+                  { staticClass: "card-body" },
+                  [_c("externals-form")],
                   1
                 )
               ]
@@ -24567,6 +24803,647 @@ if (false) {
   module.hot.accept()
   if (module.hot.data) {
     require("vue-hot-reload-api")      .rerender("data-v-6501ffaf", module.exports)
+  }
+}
+
+/***/ }),
+/* 67 */
+/***/ (function(module, exports, __webpack_require__) {
+
+var disposed = false
+var normalizeComponent = __webpack_require__(12)
+/* script */
+var __vue_script__ = __webpack_require__(69)
+/* template */
+var __vue_template__ = __webpack_require__(68)
+/* template functional */
+var __vue_template_functional__ = false
+/* styles */
+var __vue_styles__ = null
+/* scopeId */
+var __vue_scopeId__ = null
+/* moduleIdentifier (server only) */
+var __vue_module_identifier__ = null
+var Component = normalizeComponent(
+  __vue_script__,
+  __vue_template__,
+  __vue_template_functional__,
+  __vue_styles__,
+  __vue_scopeId__,
+  __vue_module_identifier__
+)
+Component.options.__file = "resources/assets/js/components/forms_partial/bids/BudgetForm.vue"
+
+/* hot reload */
+if (false) {(function () {
+  var hotAPI = require("vue-hot-reload-api")
+  hotAPI.install(require("vue"), false)
+  if (!hotAPI.compatible) return
+  module.hot.accept()
+  if (!module.hot.data) {
+    hotAPI.createRecord("data-v-5d67913d", Component.options)
+  } else {
+    hotAPI.reload("data-v-5d67913d", Component.options)
+  }
+  module.hot.dispose(function (data) {
+    disposed = true
+  })
+})()}
+
+module.exports = Component.exports
+
+
+/***/ }),
+/* 68 */
+/***/ (function(module, exports, __webpack_require__) {
+
+var render = function() {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+  return _c("div", [
+    _c("div", { staticClass: "form-group" }, [
+      _c("label", [_vm._v("Bid Budget")]),
+      _vm._v(" "),
+      _c("input", {
+        directives: [
+          {
+            name: "model",
+            rawName: "v-model",
+            value: _vm.bidBudget,
+            expression: "bidBudget"
+          },
+          {
+            name: "validate",
+            rawName: "v-validate",
+            value: { required: true },
+            expression: "{required:true}"
+          }
+        ],
+        staticClass: "form-control",
+        class: { "is-invalid": _vm.errors.has("bidBudget") },
+        attrs: { id: "bidBudget" },
+        domProps: { value: _vm.bidBudget },
+        on: {
+          input: function($event) {
+            if ($event.target.composing) {
+              return
+            }
+            _vm.bidBudget = $event.target.value
+          }
+        }
+      })
+    ]),
+    _vm._v(" "),
+    _c("div", { staticClass: "form-group" }, [
+      _c("label", [_vm._v("Budget Utilised")]),
+      _vm._v(" "),
+      _c("input", {
+        directives: [
+          {
+            name: "model",
+            rawName: "v-model",
+            value: _vm.utilised,
+            expression: "utilised"
+          },
+          {
+            name: "validate",
+            rawName: "v-validate",
+            value: { required: true },
+            expression: "{required:true}"
+          }
+        ],
+        staticClass: "form-control",
+        class: { "is-invalid": _vm.errors.has("utilised") },
+        attrs: { id: "utilised" },
+        domProps: { value: _vm.utilised },
+        on: {
+          input: function($event) {
+            if ($event.target.composing) {
+              return
+            }
+            _vm.utilised = $event.target.value
+          }
+        }
+      })
+    ])
+  ])
+}
+var staticRenderFns = []
+render._withStripped = true
+module.exports = { render: render, staticRenderFns: staticRenderFns }
+if (false) {
+  module.hot.accept()
+  if (module.hot.data) {
+    require("vue-hot-reload-api")      .rerender("data-v-5d67913d", module.exports)
+  }
+}
+
+/***/ }),
+/* 69 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+
+/* harmony default export */ __webpack_exports__["default"] = ({
+	data: function data() {
+		return {
+			bidBudget: 0,
+			utilised: 0
+		};
+	}
+});
+
+/***/ }),
+/* 70 */
+/***/ (function(module, exports, __webpack_require__) {
+
+var disposed = false
+var normalizeComponent = __webpack_require__(12)
+/* script */
+var __vue_script__ = __webpack_require__(72)
+/* template */
+var __vue_template__ = __webpack_require__(71)
+/* template functional */
+var __vue_template_functional__ = false
+/* styles */
+var __vue_styles__ = null
+/* scopeId */
+var __vue_scopeId__ = null
+/* moduleIdentifier (server only) */
+var __vue_module_identifier__ = null
+var Component = normalizeComponent(
+  __vue_script__,
+  __vue_template__,
+  __vue_template_functional__,
+  __vue_styles__,
+  __vue_scopeId__,
+  __vue_module_identifier__
+)
+Component.options.__file = "resources/assets/js/components/forms_partial/bids/ClientForm.vue"
+
+/* hot reload */
+if (false) {(function () {
+  var hotAPI = require("vue-hot-reload-api")
+  hotAPI.install(require("vue"), false)
+  if (!hotAPI.compatible) return
+  module.hot.accept()
+  if (!module.hot.data) {
+    hotAPI.createRecord("data-v-6fedefc3", Component.options)
+  } else {
+    hotAPI.reload("data-v-6fedefc3", Component.options)
+  }
+  module.hot.dispose(function (data) {
+    disposed = true
+  })
+})()}
+
+module.exports = Component.exports
+
+
+/***/ }),
+/* 71 */
+/***/ (function(module, exports, __webpack_require__) {
+
+var render = function() {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+  return _c("div", [
+    _c("div", { staticClass: "form-group" }, [
+      _c("label", [_vm._v("Client Name")]),
+      _vm._v(" "),
+      _c("input", {
+        directives: [
+          {
+            name: "model",
+            rawName: "v-model",
+            value: _vm.clientName,
+            expression: "clientName"
+          },
+          {
+            name: "validate",
+            rawName: "v-validate",
+            value: { required: true },
+            expression: "{required:true}"
+          }
+        ],
+        staticClass: "form-control",
+        class: { "is-invalid": _vm.errors.has("clientName") },
+        attrs: { id: "clientName" },
+        domProps: { value: _vm.clientName },
+        on: {
+          input: function($event) {
+            if ($event.target.composing) {
+              return
+            }
+            _vm.clientName = $event.target.value
+          }
+        }
+      })
+    ]),
+    _vm._v(" "),
+    _c("div", { staticClass: "form-group" }, [
+      _c("label", [_vm._v("Address")]),
+      _vm._v(" "),
+      _c("input", {
+        directives: [
+          {
+            name: "model",
+            rawName: "v-model",
+            value: _vm.address,
+            expression: "address"
+          },
+          {
+            name: "validate",
+            rawName: "v-validate",
+            value: { required: true },
+            expression: "{required:true}"
+          }
+        ],
+        staticClass: "form-control",
+        class: { "is-invalid": _vm.errors.has("address") },
+        attrs: { id: "address" },
+        domProps: { value: _vm.address },
+        on: {
+          input: function($event) {
+            if ($event.target.composing) {
+              return
+            }
+            _vm.address = $event.target.value
+          }
+        }
+      })
+    ]),
+    _vm._v(" "),
+    _c("div", { staticClass: "form-group" }, [
+      _c("label", [_vm._v("Contact Person")]),
+      _vm._v(" "),
+      _c("input", {
+        directives: [
+          {
+            name: "model",
+            rawName: "v-model",
+            value: _vm.contact,
+            expression: "contact"
+          },
+          {
+            name: "validate",
+            rawName: "v-validate",
+            value: { required: true },
+            expression: "{required:true}"
+          }
+        ],
+        staticClass: "form-control",
+        class: { "is-invalid": _vm.errors.has("contact") },
+        attrs: { id: "contact" },
+        domProps: { value: _vm.contact },
+        on: {
+          input: function($event) {
+            if ($event.target.composing) {
+              return
+            }
+            _vm.contact = $event.target.value
+          }
+        }
+      })
+    ])
+  ])
+}
+var staticRenderFns = []
+render._withStripped = true
+module.exports = { render: render, staticRenderFns: staticRenderFns }
+if (false) {
+  module.hot.accept()
+  if (module.hot.data) {
+    require("vue-hot-reload-api")      .rerender("data-v-6fedefc3", module.exports)
+  }
+}
+
+/***/ }),
+/* 72 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+
+/* harmony default export */ __webpack_exports__["default"] = ({
+	data: function data() {
+		return {
+			clientName: '',
+			address: '',
+			contact: ''
+		};
+	}
+});
+
+/***/ }),
+/* 73 */
+/***/ (function(module, exports, __webpack_require__) {
+
+var disposed = false
+var normalizeComponent = __webpack_require__(12)
+/* script */
+var __vue_script__ = __webpack_require__(75)
+/* template */
+var __vue_template__ = __webpack_require__(74)
+/* template functional */
+var __vue_template_functional__ = false
+/* styles */
+var __vue_styles__ = null
+/* scopeId */
+var __vue_scopeId__ = null
+/* moduleIdentifier (server only) */
+var __vue_module_identifier__ = null
+var Component = normalizeComponent(
+  __vue_script__,
+  __vue_template__,
+  __vue_template_functional__,
+  __vue_styles__,
+  __vue_scopeId__,
+  __vue_module_identifier__
+)
+Component.options.__file = "resources/assets/js/components/forms_partial/bids/TeamForm.vue"
+
+/* hot reload */
+if (false) {(function () {
+  var hotAPI = require("vue-hot-reload-api")
+  hotAPI.install(require("vue"), false)
+  if (!hotAPI.compatible) return
+  module.hot.accept()
+  if (!module.hot.data) {
+    hotAPI.createRecord("data-v-604c8956", Component.options)
+  } else {
+    hotAPI.reload("data-v-604c8956", Component.options)
+  }
+  module.hot.dispose(function (data) {
+    disposed = true
+  })
+})()}
+
+module.exports = Component.exports
+
+
+/***/ }),
+/* 74 */
+/***/ (function(module, exports, __webpack_require__) {
+
+var render = function() {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+  return _vm._m(0)
+}
+var staticRenderFns = [
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", [
+      _c("div", { staticClass: "form-group" }, [
+        _c("label", [_vm._v("Team Leader")]),
+        _vm._v(" "),
+        _c("select", { staticClass: "form-control" }, [
+          _c("option", [_vm._v("Default select")])
+        ])
+      ]),
+      _vm._v(" "),
+      _c("div", { staticClass: "form-group" }, [
+        _c("label", [_vm._v("Team Members")]),
+        _vm._v(" "),
+        _c("select", { staticClass: "form-control" }, [
+          _c("option", [_vm._v("Default select")])
+        ])
+      ])
+    ])
+  }
+]
+render._withStripped = true
+module.exports = { render: render, staticRenderFns: staticRenderFns }
+if (false) {
+  module.hot.accept()
+  if (module.hot.data) {
+    require("vue-hot-reload-api")      .rerender("data-v-604c8956", module.exports)
+  }
+}
+
+/***/ }),
+/* 75 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+
+/* harmony default export */ __webpack_exports__["default"] = ({
+	data: function data() {
+		return {};
+	}
+});
+
+/***/ }),
+/* 76 */
+/***/ (function(module, exports, __webpack_require__) {
+
+var disposed = false
+var normalizeComponent = __webpack_require__(12)
+/* script */
+var __vue_script__ = __webpack_require__(77)
+/* template */
+var __vue_template__ = __webpack_require__(78)
+/* template functional */
+var __vue_template_functional__ = false
+/* styles */
+var __vue_styles__ = null
+/* scopeId */
+var __vue_scopeId__ = null
+/* moduleIdentifier (server only) */
+var __vue_module_identifier__ = null
+var Component = normalizeComponent(
+  __vue_script__,
+  __vue_template__,
+  __vue_template_functional__,
+  __vue_styles__,
+  __vue_scopeId__,
+  __vue_module_identifier__
+)
+Component.options.__file = "resources/assets/js/components/forms_partial/bids/ExternalsForm.vue"
+
+/* hot reload */
+if (false) {(function () {
+  var hotAPI = require("vue-hot-reload-api")
+  hotAPI.install(require("vue"), false)
+  if (!hotAPI.compatible) return
+  module.hot.accept()
+  if (!module.hot.data) {
+    hotAPI.createRecord("data-v-1485cef0", Component.options)
+  } else {
+    hotAPI.reload("data-v-1485cef0", Component.options)
+  }
+  module.hot.dispose(function (data) {
+    disposed = true
+  })
+})()}
+
+module.exports = Component.exports
+
+
+/***/ }),
+/* 77 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+
+/* harmony default export */ __webpack_exports__["default"] = ({
+	data: function data() {
+		return {};
+	}
+});
+
+/***/ }),
+/* 78 */
+/***/ (function(module, exports, __webpack_require__) {
+
+var render = function() {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+  return _c("div", [
+    _vm._m(0),
+    _vm._v(" "),
+    _c("div", { staticClass: "form-group" }, [
+      _c("label", [_vm._v("Sub Con / Vendor / Partner Name")]),
+      _vm._v(" "),
+      _c("input", {
+        directives: [
+          {
+            name: "validate",
+            rawName: "v-validate",
+            value: { required: true },
+            expression: "{required:true}"
+          }
+        ],
+        staticClass: "form-control",
+        attrs: { id: "bidId" }
+      })
+    ])
+  ])
+}
+var staticRenderFns = [
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "form-group" }, [
+      _c("label", [_vm._v("Type")]),
+      _vm._v(" "),
+      _c("select", { staticClass: "form-control" }, [
+        _c("option", [_vm._v("Consortium")]),
+        _vm._v(" "),
+        _c("option", [_vm._v("JV")]),
+        _vm._v(" "),
+        _c("option", [_vm._v("Sub Consultant")])
+      ])
+    ])
+  }
+]
+render._withStripped = true
+module.exports = { render: render, staticRenderFns: staticRenderFns }
+if (false) {
+  module.hot.accept()
+  if (module.hot.data) {
+    require("vue-hot-reload-api")      .rerender("data-v-1485cef0", module.exports)
   }
 }
 
