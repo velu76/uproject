@@ -35,23 +35,22 @@ Bids consists of the following a set of forms:
         <li>Client Name [Text Name]</li> 
         <li>Address [ <i>still in design</i> ]</li> 
         <li>Contact Person [Text Name]</li> 
-       </ul>
-       
+       </ul>       
    <li>Team Details</li>
       <ul> 
         <li>Team Leader [Text Name]</li> 
         <li>Team Members [ <i>still in design</i> ]</li>         
-       </ul>
-   
+       </ul>   
    <li>External Parties / Partner Details </li>
       <ul> 
         <li>Type [ List of pre-defined values - Select ]</li> 
         <li>Team Members [ <i>still in design</i> ]</li>         
-       </ul>
-       
-    <li>External Parties / Partner Details </li>
+       </ul>       
+    <li>Finance Details </li>
       <ul> 
-        <li>Type [ List of pre-defined values - Select ]</li> 
-        <li>Team Members [ <i>still in design</i> ]</li>         
+        <li>Currency Used [ List of pre-defined values - Select ]</li> 
+        <li>Actual Fee [ $, 2 decimal places ]</li>         
+        <li>Contract Sum [ $, 2 decimal places ]</li>
+        <li>Project Cost / Value [ Estimated, $, 2 decimal places ]</li>          
        </ul>
    
