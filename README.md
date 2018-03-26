@@ -10,7 +10,7 @@ Bids consists of the following a set of forms:
       <li> Bid Referene Number [Bid unique ID number] </li>
       <li> Bid Source [Referenced by who] </li>
       <li> Bid Category [List of pre-defined category tags] </li>
-      <li> Status [List of pre-defined status tags : 'Ongoing', 'Finished', 'Not Started', 'Cancelled - By Client', 'Cancelled Internally']</li>
+      <li> Status [List of pre-defined status tags : 'Ongoing', 'Finished', 'Not Started', 'Cancelled - By Client', 'Cancelled Internally' - Select ]</li>
        <li> Bid Description [Scope of Bid] </li> 
        <li> Estimated Start Date [ Estimated Date ] </li>
        <li> Estimated End Date [ Estimated Date ] </li>
@@ -33,5 +33,25 @@ Bids consists of the following a set of forms:
   <li>Client Details</li>
       <ul> 
         <li>Client Name [Text Name]</li> 
-        <li>Address [ _still in design_ ]</li> 
-        <li></li> 
+        <li>Address [ <i>still in design</i> ]</li> 
+        <li>Contact Person [Text Name]</li> 
+       </ul>
+       
+   <li>Team Details</li>
+      <ul> 
+        <li>Team Leader [Text Name]</li> 
+        <li>Team Members [ <i>still in design</i> ]</li>         
+       </ul>
+   
+   <li>External Parties / Partner Details </li>
+      <ul> 
+        <li>Type [ List of pre-defined values - Select ]</li> 
+        <li>Team Members [ <i>still in design</i> ]</li>         
+       </ul>
+       
+    <li>External Parties / Partner Details </li>
+      <ul> 
+        <li>Type [ List of pre-defined values - Select ]</li> 
+        <li>Team Members [ <i>still in design</i> ]</li>         
+       </ul>
+   
