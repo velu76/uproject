@@ -4,4 +4,5 @@
 @section('bids', 'active')
 
 @section('content')
+	<BidForm></BidForm>
 @endsection
