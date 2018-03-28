@@ -16,3 +16,7 @@ Route::get('/', function () {
 });
 
 Route::get('/bids', 'BidsController@index')->name('bids');
+
+Route::get('/countries', function() {
+	return Countries::getList('en', 'html');
+});
