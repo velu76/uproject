@@ -1,5 +1,6 @@
 <?php
 
+use upro\Admin\Util\Country;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -18,5 +19,14 @@ Route::get('/', function () {
 Route::get('/bids', 'BidsController@index')->name('bids');
 
 Route::get('/countries', function() {
-	return Countries::getList('en', 'html');
+	$tableName = "CV";
+	$clist = Country::getCountries();
+	$mySql = "Insert into {$tableName}(id, name) values";
+	$index = 0;
+	foreach($clist as $c){
+		$mySql .= " ($index, '$c'),";
+		$index += 1;
+	}
+	$mySql = rtrim($mySql,",") . ';';
+	return $mySql;
 });
