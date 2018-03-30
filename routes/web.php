@@ -20,13 +20,11 @@ Route::get('/bids', 'BidsController@index')->name('bids');
 
 Route::get('/countries', function() {
 	$tableName = "CV";
-	$clist = Country::getCountries();
-	$mySql = "Insert into {$tableName}(id, name) values";
-	$index = 0;
+	$clist = Country::all();
+	
 	foreach($clist as $c){
-		$mySql .= " ($index, '$c'),";
-		$index += 1;
+		echo "$c->name <br>";
 	}
-	$mySql = rtrim($mySql,",") . ';';
-	return $mySql;
+	
+	
 });
