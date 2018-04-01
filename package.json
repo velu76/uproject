@@ -19,6 +19,7 @@
         "bootstrap": "^4.0.0",
         "font-awesome": "^4.7.0",
         "vee-validate": "^2.0.6",
-        "vue-flatpickr-component": "^7.0.0"
+        "vue-flatpickr-component": "^7.0.0",
+        "vuesax": "^3.0.2"
     }
 }

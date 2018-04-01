@@ -19,12 +19,5 @@ Route::get('/', function () {
 Route::get('/bids', 'BidsController@index')->name('bids');
 
 Route::get('/countries', function() {
-	$tableName = "CV";
-	$clist = Country::all();
-	
-	foreach($clist as $c){
-		echo "$c->name <br>";
-	}
-	
-	
+
 });

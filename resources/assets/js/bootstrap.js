@@ -6,12 +6,20 @@
 import Vue from 'vue';
 
 import axios from 'axios';
+
 import flatPickr from 'vue-flatpickr-component';
 import 'flatpickr/dist/flatpickr.css';
+
 import VeeValidate from 'vee-validate';
+
+// Vuesax library for Vue UI
+import Vuesax from 'vuesax';
+import 'vuesax/dist/vuesax.css';
+
 
 Vue.use(flatPickr);
 Vue.use(VeeValidate);
+Vue.use(Vuesax);
 
 window.axios = require('axios');
 
