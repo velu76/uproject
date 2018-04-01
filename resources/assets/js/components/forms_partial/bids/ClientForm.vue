@@ -25,20 +25,19 @@
 			vs-placeholder="zip coxde"
 			v-model="zip"			
 			/>			
-
+			<label>Country</label>
 			<select>
-				<option v-for="option in countries" value="option.value">{{option.text}}</option>
+				<option v-for="option,index in countries" value="index">{{option}}</option>
 			</select>			
 			
 		</div>
 
 	<div class="form-group">
-		<label>Contact Person</label>
-		<input class="form-control" 
-		id="contact" 
-		v-model="contact"
-		v-validate="{required:true}"
-		:class="{'is-invalid' : errors.has('contact')}"> </input>
+		<vs-input
+			vs-label="Contact Person"
+			vs-placeholder="Contact person at client side"
+			v-model="contact"		
+		/>		
 	</div>
 </div>
 </template>
@@ -47,11 +46,7 @@
 export default {
 	data() {
 		return {
-			countries:[
-				{text:'IT',value:1},
-				{text:'Blade Runner',value:2},
-				{text:'Thor Ragnarok',value:3},
-			],
+			countries:'',
 			clientName: '',
 			aStreet1: '',
 			aStreet2: '',
@@ -60,6 +55,15 @@ export default {
 			contact: ''
 		};
 	},
+
+	created() {
+		axios.get('/countries').then(response => {
+			this.countries = response.data;
+			console.log(this.countries);
+		}).catch(e=>{
+			console.log("Error:" + e);
+		});
+	}
 	
 }
 </script>

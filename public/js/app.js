@@ -24860,12 +24860,11 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 //
-//
 
 /* harmony default export */ __webpack_exports__["default"] = ({
 	data: function data() {
 		return {
-			countries: [{ text: 'IT', value: 1 }, { text: 'Blade Runner', value: 2 }, { text: 'Thor Ragnarok', value: 3 }],
+			countries: '',
 			clientName: '',
 			aStreet1: '',
 			aStreet2: '',
@@ -24873,6 +24872,16 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 			country: '',
 			contact: ''
 		};
+	},
+	created: function created() {
+		var _this = this;
+
+		axios.get('/countries').then(function (response) {
+			_this.countries = response.data;
+			console.log(_this.countries);
+		}).catch(function (e) {
+			console.log("Error:" + e);
+		});
 	}
 });
 
@@ -24944,11 +24953,13 @@ var render = function() {
           }
         }),
         _vm._v(" "),
+        _c("label", [_vm._v("Country")]),
+        _vm._v(" "),
         _c(
           "select",
-          _vm._l(_vm.countries, function(option) {
-            return _c("option", { attrs: { value: "option.value" } }, [
-              _vm._v(_vm._s(option.text))
+          _vm._l(_vm.countries, function(option, index) {
+            return _c("option", { attrs: { value: "index" } }, [
+              _vm._v(_vm._s(option))
             ])
           })
         )
@@ -24956,38 +24967,26 @@ var render = function() {
       1
     ),
     _vm._v(" "),
-    _c("div", { staticClass: "form-group" }, [
-      _c("label", [_vm._v("Contact Person")]),
-      _vm._v(" "),
-      _c("input", {
-        directives: [
-          {
-            name: "model",
-            rawName: "v-model",
-            value: _vm.contact,
-            expression: "contact"
+    _c(
+      "div",
+      { staticClass: "form-group" },
+      [
+        _c("vs-input", {
+          attrs: {
+            "vs-label": "Contact Person",
+            "vs-placeholder": "Contact person at client side"
           },
-          {
-            name: "validate",
-            rawName: "v-validate",
-            value: { required: true },
-            expression: "{required:true}"
+          model: {
+            value: _vm.contact,
+            callback: function($$v) {
+              _vm.contact = $$v
+            },
+            expression: "contact"
           }
-        ],
-        staticClass: "form-control",
-        class: { "is-invalid": _vm.errors.has("contact") },
-        attrs: { id: "contact" },
-        domProps: { value: _vm.contact },
-        on: {
-          input: function($event) {
-            if ($event.target.composing) {
-              return
-            }
-            _vm.contact = $event.target.value
-          }
-        }
-      })
-    ])
+        })
+      ],
+      1
+    )
   ])
 }
 var staticRenderFns = []

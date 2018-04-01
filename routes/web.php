@@ -18,6 +18,6 @@ Route::get('/', function () {
 
 Route::get('/bids', 'BidsController@index')->name('bids');
 
-Route::get('/countries', function() {
-
+Route::get('/countries', function(Country $cnty) {
+	return $cnty->countryCollection();
 });
