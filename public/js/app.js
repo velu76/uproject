@@ -24816,6 +24816,17 @@ module.exports = Component.exports
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__admin_ClientForm_vue__ = __webpack_require__(99);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__admin_ClientForm_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0__admin_ClientForm_vue__);
+//
+//
+//
+//
+//
+//
+//
+//
+//
 //
 //
 //
@@ -24861,7 +24872,14 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 
+
+
+
 /* harmony default export */ __webpack_exports__["default"] = ({
+	components: {
+		NewClientForm: __WEBPACK_IMPORTED_MODULE_0__admin_ClientForm_vue___default.a
+	},
+
 	data: function data() {
 		return {
 			countries: '',
@@ -24870,7 +24888,8 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 			aStreet2: '',
 			zip: '',
 			country: '',
-			contact: ''
+			contact: '',
+			newClientFormActive: false
 		};
 	},
 	created: function created() {
@@ -24882,7 +24901,15 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 		}).catch(function (e) {
 			console.log("Error:" + e);
 		});
+	},
+
+
+	methods: {
+		newClient: function newClient() {
+			alert("New client!");
+		}
 	}
+
 });
 
 /***/ }),
@@ -24893,101 +24920,143 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _c("div", [
-    _c(
-      "div",
-      { staticClass: "form-group" },
-      [
-        _c("vs-input", {
-          class: { "is-invalid": _vm.errors.has("clientName") },
-          attrs: {
-            "vs-label": "Client Name",
-            "vs-placeholder": "Name of client"
-          },
-          model: {
-            value: _vm.clientName,
-            callback: function($$v) {
-              _vm.clientName = $$v
+  return _c(
+    "div",
+    [
+      _c(
+        "div",
+        { staticClass: "form-group small" },
+        [
+          _c(
+            "vs-button",
+            {
+              attrs: { "vs-type": "primary-border" },
+              on: {
+                click: function($event) {
+                  _vm.newClientFormActive = true
+                }
+              }
             },
-            expression: "clientName"
-          }
-        })
-      ],
-      1
-    ),
-    _vm._v(" "),
-    _c(
-      "div",
-      { staticClass: "form-group" },
-      [
-        _c("vs-input", {
-          attrs: { "vs-label": "Address", "vs-placeholder": "Street Line 1" },
-          model: {
-            value: _vm.aStreet1,
-            callback: function($$v) {
-              _vm.aStreet1 = $$v
+            [_vm._v("Add New Client")]
+          )
+        ],
+        1
+      ),
+      _vm._v(" "),
+      _c(
+        "div",
+        { staticClass: "form-group small" },
+        [
+          _c("vs-input", {
+            class: { "is-invalid": _vm.errors.has("clientName") },
+            attrs: {
+              "vs-label": "Client Name",
+              "vs-placeholder": "Name of client"
             },
-            expression: "aStreet1"
-          }
-        }),
-        _vm._v(" "),
-        _c("vs-input", {
-          attrs: { "vs-placeholder": "Street Line 2" },
-          model: {
-            value: _vm.aStreet2,
-            callback: function($$v) {
-              _vm.aStreet2 = $$v
-            },
-            expression: "aStreet2"
-          }
-        }),
-        _vm._v(" "),
-        _c("vs-input", {
-          attrs: { "vs-label": "Zipcode", "vs-placeholder": "zip coxde" },
-          model: {
-            value: _vm.zip,
-            callback: function($$v) {
-              _vm.zip = $$v
-            },
-            expression: "zip"
-          }
-        }),
-        _vm._v(" "),
-        _c("label", [_vm._v("Country")]),
-        _vm._v(" "),
-        _c(
-          "select",
-          _vm._l(_vm.countries, function(option, index) {
-            return _c("option", { attrs: { value: "index" } }, [
-              _vm._v(_vm._s(option))
-            ])
+            model: {
+              value: _vm.clientName,
+              callback: function($$v) {
+                _vm.clientName = $$v
+              },
+              expression: "clientName"
+            }
           })
-        )
-      ],
-      1
-    ),
-    _vm._v(" "),
-    _c(
-      "div",
-      { staticClass: "form-group" },
-      [
-        _c("vs-input", {
-          attrs: {
-            "vs-label": "Contact Person",
-            "vs-placeholder": "Contact person at client side"
-          },
-          model: {
-            value: _vm.contact,
-            callback: function($$v) {
-              _vm.contact = $$v
+        ],
+        1
+      ),
+      _vm._v(" "),
+      _c(
+        "div",
+        { staticClass: "form-group small" },
+        [
+          _c("vs-input", {
+            attrs: { "vs-label": "Address", "vs-placeholder": "Street Line 1" },
+            model: {
+              value: _vm.aStreet1,
+              callback: function($$v) {
+                _vm.aStreet1 = $$v
+              },
+              expression: "aStreet1"
+            }
+          }),
+          _vm._v(" "),
+          _c("vs-input", {
+            attrs: { "vs-placeholder": "Street Line 2" },
+            model: {
+              value: _vm.aStreet2,
+              callback: function($$v) {
+                _vm.aStreet2 = $$v
+              },
+              expression: "aStreet2"
+            }
+          }),
+          _vm._v(" "),
+          _c("vs-input", {
+            attrs: { "vs-label": "Zipcode", "vs-placeholder": "zip coxde" },
+            model: {
+              value: _vm.zip,
+              callback: function($$v) {
+                _vm.zip = $$v
+              },
+              expression: "zip"
+            }
+          }),
+          _vm._v(" "),
+          _c("label", [_vm._v("Country")]),
+          _vm._v(" "),
+          _c(
+            "select",
+            _vm._l(_vm.countries, function(option, index) {
+              return _c("option", { attrs: { value: "index" } }, [
+                _vm._v(_vm._s(option))
+              ])
+            })
+          )
+        ],
+        1
+      ),
+      _vm._v(" "),
+      _c(
+        "div",
+        { staticClass: "form-group small" },
+        [
+          _c("vs-input", {
+            attrs: {
+              "vs-label": "Contact Person",
+              "vs-placeholder": "Contact person at client side"
             },
-            expression: "contact"
+            model: {
+              value: _vm.contact,
+              callback: function($$v) {
+                _vm.contact = $$v
+              },
+              expression: "contact"
+            }
+          })
+        ],
+        1
+      ),
+      _vm._v(" "),
+      _c(
+        "vs-popup",
+        {
+          attrs: {
+            "vs-fullscreen": "",
+            "vs-title": "New Client",
+            "vs-active": _vm.newClientFormActive
+          },
+          on: {
+            "vs-cancel": function($event) {
+              _vm.newClientFormActive = false
+            }
           }
-        })
-      ],
-      1
-    )
-  ])
+        },
+        [_c("NewClientForm")],
+        1
+      )
+    ],
+    1
+  )
 }
 var staticRenderFns = []
 render._withStripped = true
@@ -26143,6 +26212,266 @@ if (false) {
 /***/ (function(module, exports) {
 
 // removed by extract-text-webpack-plugin
+
+/***/ }),
+/* 93 */,
+/* 94 */,
+/* 95 */,
+/* 96 */,
+/* 97 */,
+/* 98 */,
+/* 99 */
+/***/ (function(module, exports, __webpack_require__) {
+
+var disposed = false
+var normalizeComponent = __webpack_require__(1)
+/* script */
+var __vue_script__ = __webpack_require__(100)
+/* template */
+var __vue_template__ = __webpack_require__(101)
+/* template functional */
+var __vue_template_functional__ = false
+/* styles */
+var __vue_styles__ = null
+/* scopeId */
+var __vue_scopeId__ = null
+/* moduleIdentifier (server only) */
+var __vue_module_identifier__ = null
+var Component = normalizeComponent(
+  __vue_script__,
+  __vue_template__,
+  __vue_template_functional__,
+  __vue_styles__,
+  __vue_scopeId__,
+  __vue_module_identifier__
+)
+Component.options.__file = "resources/assets/js/components/admin/ClientForm.vue"
+
+/* hot reload */
+if (false) {(function () {
+  var hotAPI = require("vue-hot-reload-api")
+  hotAPI.install(require("vue"), false)
+  if (!hotAPI.compatible) return
+  module.hot.accept()
+  if (!module.hot.data) {
+    hotAPI.createRecord("data-v-9669feb4", Component.options)
+  } else {
+    hotAPI.reload("data-v-9669feb4", Component.options)
+  }
+  module.hot.dispose(function (data) {
+    disposed = true
+  })
+})()}
+
+module.exports = Component.exports
+
+
+/***/ }),
+/* 100 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+
+/* harmony default export */ __webpack_exports__["default"] = ({
+	data: function data() {
+		return {
+			countries: [{ 'text': 'Fulham', 'value': 1 }, { 'text': 'Bronze', 'value': 2 }],
+			clientName: '',
+			aStreet1: '',
+			aStreet2: '',
+			zip: '',
+			country: '',
+			contact: ''
+		};
+	},
+	created: function created() {
+		this.countries = [{ 'text': 'Fulham', 'value': 1 }, { 'text': 'Bronze', 'value': 2 }];
+		// axios.get('/countries').then(response => {
+		// 	this.countries = response.data;
+		// 	// console.log(this.countries);
+		// 	this.countries = [{'text':'Fulham', 'value':1},{'text':'Bronze', 'value':2}];
+		// }).catch(e=>{
+		// 	console.log("Error:" + e);
+		// });
+	}
+});
+
+/***/ }),
+/* 101 */
+/***/ (function(module, exports, __webpack_require__) {
+
+var render = function() {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+  return _c("div", [
+    _c(
+      "div",
+      { staticClass: "form-group" },
+      [
+        _c("vs-input", {
+          class: { "is-invalid": _vm.errors.has("clientName") },
+          attrs: {
+            "vs-label": "Client Name",
+            "vs-placeholder": "Name of client"
+          },
+          model: {
+            value: _vm.clientName,
+            callback: function($$v) {
+              _vm.clientName = $$v
+            },
+            expression: "clientName"
+          }
+        })
+      ],
+      1
+    ),
+    _vm._v(" "),
+    _c(
+      "div",
+      { staticClass: "form-group" },
+      [
+        _c("vs-input", {
+          attrs: { "vs-label": "Address", "vs-placeholder": "Street Line 1" },
+          model: {
+            value: _vm.aStreet1,
+            callback: function($$v) {
+              _vm.aStreet1 = $$v
+            },
+            expression: "aStreet1"
+          }
+        }),
+        _vm._v(" "),
+        _c("vs-input", {
+          attrs: { "vs-placeholder": "Street Line 2" },
+          model: {
+            value: _vm.aStreet2,
+            callback: function($$v) {
+              _vm.aStreet2 = $$v
+            },
+            expression: "aStreet2"
+          }
+        }),
+        _vm._v(" "),
+        _c("vs-input", {
+          attrs: { "vs-labll": "Zipcode", "vs-placeholder": "zip coxde" },
+          model: {
+            value: _vm.zip,
+            callback: function($$v) {
+              _vm.zip = $$v
+            },
+            expression: "zip"
+          }
+        }),
+        _vm._v(" "),
+        _c("vs-select", {
+          staticClass: "vs-w-4",
+          attrs: { options: _vm.countries, label: "Country" },
+          model: {
+            value: _vm.country,
+            callback: function($$v) {
+              _vm.country = $$v
+            },
+            expression: "country"
+          }
+        })
+      ],
+      1
+    ),
+    _vm._v(" "),
+    _c(
+      "div",
+      { staticClass: "form-group" },
+      [
+        _c("vs-input", {
+          attrs: {
+            "vs-label": "Contact Person",
+            "vs-placeholder": "Contact person at client side"
+          },
+          model: {
+            value: _vm.contact,
+            callback: function($$v) {
+              _vm.contact = $$v
+            },
+            expression: "contact"
+          }
+        })
+      ],
+      1
+    ),
+    _vm._v(" "),
+    _c(
+      "div",
+      { staticClass: "form-group" },
+      [
+        _c("vs-button", { attrs: { "vs-type": "success-border" } }, [
+          _vm._v("Save")
+        ])
+      ],
+      1
+    )
+  ])
+}
+var staticRenderFns = []
+render._withStripped = true
+module.exports = { render: render, staticRenderFns: staticRenderFns }
+if (false) {
+  module.hot.accept()
+  if (module.hot.data) {
+    require("vue-hot-reload-api")      .rerender("data-v-9669feb4", module.exports)
+  }
+}
 
 /***/ })
 /******/ ]);

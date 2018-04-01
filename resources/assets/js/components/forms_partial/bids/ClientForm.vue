@@ -1,6 +1,9 @@
 <template>
 	<div>
-		<div class="form-group">			
+		<div class="form-group small">
+			<vs-button vs-type="primary-border" @click="newClientFormActive=true">Add New Client</vs-button>
+		</div>
+		<div class="form-group small">			
 			<vs-input 
 			vs-label="Client Name" 
 			vs-placeholder="Name of client" 
@@ -8,8 +11,7 @@
 			:class="{'is-invalid' : errors.has('clientName')}"
 			/>
 		</div>
-
-		<div class="form-group">
+		<div class="form-group small">
 			<vs-input
 			vs-label="Address"
 			vs-placeholder="Street Line 1"
@@ -29,21 +31,35 @@
 			<select>
 				<option v-for="option,index in countries" value="index">{{option}}</option>
 			</select>			
-			
 		</div>
-
-	<div class="form-group">
+	<div class="form-group small">
 		<vs-input
 			vs-label="Contact Person"
 			vs-placeholder="Contact person at client side"
 			v-model="contact"		
 		/>		
 	</div>
+	<vs-popup vs-fullscreen 
+		vs-title="New Client" 
+		:vs-active="newClientFormActive" 
+		@vs-cancel="newClientFormActive=false">
+
+		 <NewClientForm></NewClientForm>
+
+	</vs-popup>
+
 </div>
 </template>
 
 <script>
+
+import NewClientForm from '../../admin/ClientForm.vue';
+
 export default {
+	components: {
+		NewClientForm
+	},
+
 	data() {
 		return {
 			countries:'',
@@ -52,7 +68,8 @@ export default {
 			aStreet2: '',
 			zip:'',
 			country:'',			
-			contact: ''
+			contact: '',
+			newClientFormActive: false,
 		};
 	},
 
@@ -63,6 +80,12 @@ export default {
 		}).catch(e=>{
 			console.log("Error:" + e);
 		});
+	},
+
+	methods: {
+		newClient() {
+			alert("New client!");
+		}
 	}
 	
 }
