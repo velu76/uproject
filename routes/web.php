@@ -19,10 +19,5 @@ Route::get('/', function () {
 Route::get('/bids', 'BidsController@index')->name('bids');
 
 Route::get('/countries', function(Country $cnty) {
-	$countries =  $cnty->countryCollection();
-	$formattedCountries = array();
-	foreach($countries as $index => $name){
-		
-	}
-	return $formattedCountries;
+	return $cnty->countryCollection();	
 });

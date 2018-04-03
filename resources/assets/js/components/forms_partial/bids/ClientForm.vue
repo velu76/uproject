@@ -27,10 +27,12 @@
 			vs-placeholder="zip coxde"
 			v-model="zip"			
 			/>			
+			
 			<label>Country</label>
-			<select>
-				<option v-for="option,index in countries" value="index">{{option}}</option>
-			</select>			
+			<select v-model="country">
+				<option v-for="country in countries" :value="country.value">{{country.text}}</option>
+			</select>
+			
 		</div>
 	<div class="form-group small">
 		<vs-input
@@ -39,14 +41,9 @@
 			v-model="contact"		
 		/>		
 	</div>
-	<vs-popup vs-fullscreen 
-		vs-title="New Client" 
-		:vs-active="newClientFormActive" 
-		@vs-cancel="newClientFormActive=false">
-
+	<div id="newClientForm" v-show="newClientFormActive">
 		 <NewClientForm></NewClientForm>
-
-	</vs-popup>
+	</div>
 
 </div>
 </template>
@@ -62,29 +59,32 @@ export default {
 
 	data() {
 		return {
-			countries:'',
+			countries:[],
 			clientName: '',
 			aStreet1: '',
 			aStreet2: '',
 			zip:'',
-			country:'',			
+			country:1,			
 			contact: '',
 			newClientFormActive: false,
+			listReady: false,
+			
 		};
 	},
+	
 
-	created() {
+	beforeCreate() {
+		
 		axios.get('/countries').then(response => {
-			this.countries = response.data;
-			console.log(this.countries);
+			this.countries = response.data;				
 		}).catch(e=>{
-			console.log("Error:" + e);
+		console.log("Error:" + e);
 		});
 	},
 
 	methods: {
-		newClient() {
-			alert("New client!");
+		getCountries() {
+		
 		}
 	}
 	

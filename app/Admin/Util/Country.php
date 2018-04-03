@@ -9,12 +9,12 @@ class Country extends Model {
   protected $fillable = ['top'];  
 
   public function countryCollection() {
-	$countries = $this->all();
-	$countryCollection = [];
+	$countries = $this->all();	
+	$cnts = [];
 	foreach($countries as $country){	
-		array_push($countryCollection,$country->name);		
-	}
-	return $countryCollection;
+		$cnts[$country->id] = ['text'=>$country->name, 'value'=>$country->id];				
+	}	
+	return $cnts;
   }
   
 }

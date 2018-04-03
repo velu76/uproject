@@ -26,12 +26,7 @@
 			v-model="zip"			
 			/>			
 			
-			<vs-select
-				class="vs-w-4"
-				:options="countries"
-				label="Country"
-				v-model="country">
-			</vs-select>
+			
 		</div>
 
 	<div class="form-group">
