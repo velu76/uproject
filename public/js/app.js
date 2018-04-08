@@ -12717,7 +12717,7 @@ function updateLink (link, options, obj) {
 /***/ (function(module, exports, __webpack_require__) {
 
 __webpack_require__(16);
-module.exports = __webpack_require__(95);
+module.exports = __webpack_require__(97);
 
 
 /***/ }),
@@ -23772,7 +23772,7 @@ var normalizeComponent = __webpack_require__(0)
 /* script */
 var __vue_script__ = __webpack_require__(56)
 /* template */
-var __vue_template__ = __webpack_require__(94)
+var __vue_template__ = __webpack_require__(96)
 /* template functional */
 var __vue_template_functional__ = false
 /* styles */
@@ -23897,19 +23897,19 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__forms_partial_bids_BudgetForm___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2__forms_partial_bids_BudgetForm__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__forms_partial_bids_ClientForm__ = __webpack_require__(66);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__forms_partial_bids_ClientForm___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3__forms_partial_bids_ClientForm__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__forms_partial_bids_TeamForm__ = __webpack_require__(72);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__forms_partial_bids_TeamForm__ = __webpack_require__(74);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__forms_partial_bids_TeamForm___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_4__forms_partial_bids_TeamForm__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__forms_partial_bids_ExternalsForm__ = __webpack_require__(75);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__forms_partial_bids_ExternalsForm__ = __webpack_require__(77);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__forms_partial_bids_ExternalsForm___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_5__forms_partial_bids_ExternalsForm__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__forms_partial_bids_FinanceForm__ = __webpack_require__(78);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__forms_partial_bids_FinanceForm__ = __webpack_require__(80);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__forms_partial_bids_FinanceForm___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_6__forms_partial_bids_FinanceForm__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__forms_partial_bids_LegalForm__ = __webpack_require__(83);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__forms_partial_bids_LegalForm__ = __webpack_require__(85);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__forms_partial_bids_LegalForm___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_7__forms_partial_bids_LegalForm__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__forms_partial_bids_StatusForm__ = __webpack_require__(85);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__forms_partial_bids_StatusForm__ = __webpack_require__(87);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__forms_partial_bids_StatusForm___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_8__forms_partial_bids_StatusForm__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__forms_partial_bids_DocumentsForm__ = __webpack_require__(87);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__forms_partial_bids_DocumentsForm__ = __webpack_require__(89);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__forms_partial_bids_DocumentsForm___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_9__forms_partial_bids_DocumentsForm__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__core_CardComponent__ = __webpack_require__(89);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__core_CardComponent__ = __webpack_require__(91);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__core_CardComponent___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_10__core_CardComponent__);
 //
 //
@@ -24772,7 +24772,7 @@ var normalizeComponent = __webpack_require__(0)
 /* script */
 var __vue_script__ = __webpack_require__(67)
 /* template */
-var __vue_template__ = __webpack_require__(71)
+var __vue_template__ = __webpack_require__(73)
 /* template functional */
 var __vue_template_functional__ = false
 /* styles */
@@ -24830,44 +24830,6 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 //
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
 
 
 
@@ -24879,26 +24841,17 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 
 	data: function data() {
 		return {
-			countries: [],
-			clientName: '',
-			aStreet1: '',
-			aStreet2: '',
-			zip: '',
-			country: 1,
-			contact: '',
 			newClientFormActive: false,
 			listReady: false
 
 		};
 	},
 	beforeCreate: function beforeCreate() {
-		var _this = this;
-
-		axios.get('/countries').then(function (response) {
-			_this.countries = response.data;
-		}).catch(function (e) {
-			console.log("Error:" + e);
-		});
+		// axios.get('/countries').then(response => {
+		// 	this.countries = response.data;				
+		// }).catch(e=>{
+		// console.log("Error:" + e);
+		// });
 	},
 
 
@@ -24917,7 +24870,7 @@ var normalizeComponent = __webpack_require__(0)
 /* script */
 var __vue_script__ = __webpack_require__(69)
 /* template */
-var __vue_template__ = __webpack_require__(70)
+var __vue_template__ = __webpack_require__(72)
 /* template functional */
 var __vue_template_functional__ = false
 /* styles */
@@ -24961,12 +24914,7 @@ module.exports = Component.exports
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-//
-//
-//
-//
-//
-//
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__core_Form_js__ = __webpack_require__(70);
 //
 //
 //
@@ -25007,32 +24955,312 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 
+
 /* harmony default export */ __webpack_exports__["default"] = ({
 	data: function data() {
 		return {
-			countries: [{ 'text': 'Fulham', 'value': 1 }, { 'text': 'Bronze', 'value': 2 }],
-			clientName: '',
-			aStreet1: '',
-			aStreet2: '',
-			zip: '',
-			country: '',
-			contact: ''
+			countries: [],
+			form: new __WEBPACK_IMPORTED_MODULE_0__core_Form_js__["a" /* default */]({
+				clientName: '',
+				aStreet1: '',
+				aStreet2: '',
+				zip: '',
+				country: 1,
+				contact: ''
+			})
+
 		};
 	},
-	created: function created() {
-		this.countries = [{ 'text': 'Fulham', 'value': 1 }, { 'text': 'Bronze', 'value': 2 }];
-		// axios.get('/countries').then(response => {
-		// 	this.countries = response.data;
-		// 	// console.log(this.countries);
-		// 	this.countries = [{'text':'Fulham', 'value':1},{'text':'Bronze', 'value':2}];
-		// }).catch(e=>{
-		// 	console.log("Error:" + e);
-		// });
+
+
+	methods: {
+		onSubmit: function onSubmit() {
+			console.log('form submitted!');
+			this.form.post('/clients').then(function (data) {
+				return console.log(data);
+			}).catch(function (err) {
+				return console.log("The form has error " + err);
+			});
+		},
+		setBorder: function setBorder() {
+			if (this.form.errors.has('clientName')) return 'danger';
+
+			return 'default';
+		}
+	},
+
+	beforeCreate: function beforeCreate() {
+		var _this = this;
+
+		axios.get('/countries').then(function (response) {
+			_this.countries = response.data;
+		}).catch(function (e) {
+			console.log("Error:" + e);
+		});
 	}
 });
 
 /***/ }),
 /* 70 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__Error_js__ = __webpack_require__(71);
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+
+
+var Form = function () {
+    /**
+     * Create a new Form instance.
+     *
+     * @param {object} data
+     */
+    function Form(data) {
+        _classCallCheck(this, Form);
+
+        this.originalData = data;
+
+        for (var field in data) {
+            this[field] = data[field];
+        }
+
+        this.errors = new __WEBPACK_IMPORTED_MODULE_0__Error_js__["a" /* default */]();
+    }
+
+    /**
+     * Fetch all relevant data for the form.
+     */
+
+
+    _createClass(Form, [{
+        key: 'data',
+        value: function data() {
+            var data = {};
+
+            for (var property in this.originalData) {
+                data[property] = this[property];
+            }
+
+            return data;
+        }
+
+        /**
+         * Reset the form fields.
+         */
+
+    }, {
+        key: 'reset',
+        value: function reset() {
+            for (var field in this.originalData) {
+                this[field] = '';
+            }
+
+            this.errors.clear();
+        }
+
+        /**
+         * Send a POST request to the given URL.
+         * .
+         * @param {string} url
+         */
+
+    }, {
+        key: 'post',
+        value: function post(url) {
+            return this.submit('post', url);
+        }
+
+        /**
+         * Send a PUT request to the given URL.
+         * .
+         * @param {string} url
+         */
+
+    }, {
+        key: 'put',
+        value: function put(url) {
+            return this.submit('put', url);
+        }
+
+        /**
+         * Send a PATCH request to the given URL.
+         * .
+         * @param {string} url
+         */
+
+    }, {
+        key: 'patch',
+        value: function patch(url) {
+            return this.submit('patch', url);
+        }
+
+        /**
+         * Send a DELETE request to the given URL.
+         * .
+         * @param {string} url
+         */
+
+    }, {
+        key: 'delete',
+        value: function _delete(url) {
+            return this.submit('delete', url);
+        }
+
+        /**
+         * Submit the form.
+         *
+         * @param {string} requestType
+         * @param {string} url
+         */
+
+    }, {
+        key: 'submit',
+        value: function submit(requestType, url) {
+            var _this = this;
+
+            return new Promise(function (resolve, reject) {
+                axios[requestType](url, _this.data()).then(function (response) {
+                    _this.onSuccess(response.data);
+
+                    resolve(response.data);
+                }).catch(function (error) {
+                    _this.onFail(error.response.data);
+
+                    reject(error.response.data);
+                });
+            });
+        }
+
+        /**
+         * Handle a successful form submission.
+         *
+         * @param {object} data
+         */
+
+    }, {
+        key: 'onSuccess',
+        value: function onSuccess(data) {
+            alert(data.message); // temporary
+
+            this.reset();
+        }
+
+        /**
+         * Handle a failed form submission.
+         *
+         * @param {object} errors
+         */
+
+    }, {
+        key: 'onFail',
+        value: function onFail(errors) {
+            this.errors.record(errors);
+        }
+    }]);
+
+    return Form;
+}();
+
+/* harmony default export */ __webpack_exports__["a"] = (Form);
+
+/***/ }),
+/* 71 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+var Errors = function () {
+    /**
+     * Create a new Errors instance.
+     */
+    function Errors() {
+        _classCallCheck(this, Errors);
+
+        this.errors = {};
+    }
+
+    /**
+     * Determine if an errors exists for the given field.
+     *
+     * @param {string} field
+     */
+
+
+    _createClass(Errors, [{
+        key: "has",
+        value: function has(field) {
+            return this.errors.hasOwnProperty(field);
+        }
+
+        /**
+         * Determine if we have any errors.
+         */
+
+    }, {
+        key: "any",
+        value: function any() {
+            return Object.keys(this.errors).length > 0;
+        }
+
+        /**
+         * Retrieve the error message for a field.
+         *
+         * @param {string} field
+         */
+
+    }, {
+        key: "get",
+        value: function get(field) {
+            if (this.errors[field]) {
+                return this.errors[field][0];
+            }
+        }
+
+        /**
+         * Record the new errors.
+         *
+         * @param {object} errors
+         */
+
+    }, {
+        key: "record",
+        value: function record(errors) {
+            this.errors = errors.errors;
+        }
+
+        /**
+         * Clear one or all error fields.
+         *
+         * @param {string|null} field
+         */
+
+    }, {
+        key: "clear",
+        value: function clear(field) {
+
+            if (field) {
+                delete this.errors[field];
+
+                return;
+            }
+
+            this.errors = {};
+        }
+    }]);
+
+    return Errors;
+}();
+
+/* harmony default export */ __webpack_exports__["a"] = (Errors);
+
+/***/ }),
+/* 72 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var render = function() {
@@ -25041,97 +25269,261 @@ var render = function() {
   var _c = _vm._self._c || _h
   return _c("div", [
     _c(
-      "div",
-      { staticClass: "form-group" },
-      [
-        _c("vs-input", {
-          class: { "is-invalid": _vm.errors.has("clientName") },
-          attrs: {
-            "vs-label": "Client Name",
-            "vs-placeholder": "Name of client"
+      "form",
+      {
+        on: {
+          submit: function($event) {
+            $event.preventDefault()
+            return _vm.onSubmit($event)
           },
-          model: {
-            value: _vm.clientName,
-            callback: function($$v) {
-              _vm.clientName = $$v
-            },
-            expression: "clientName"
+          keydown: function($event) {
+            _vm.form.errors.clear($event.target.name)
           }
-        })
-      ],
-      1
-    ),
-    _vm._v(" "),
-    _c(
-      "div",
-      { staticClass: "form-group" },
+        }
+      },
       [
-        _c("vs-input", {
-          attrs: { "vs-label": "Address", "vs-placeholder": "Street Line 1" },
-          model: {
-            value: _vm.aStreet1,
-            callback: function($$v) {
-              _vm.aStreet1 = $$v
+        _c("div", { staticClass: "form-group small" }, [
+          _c("label", { attrs: { for: "contact" } }, [
+            _vm._v("Contact Person")
+          ]),
+          _vm._v(" "),
+          _c("input", {
+            directives: [
+              {
+                name: "model",
+                rawName: "v-model",
+                value: _vm.form.contact,
+                expression: "form.contact"
+              }
+            ],
+            staticClass: "form-control",
+            attrs: { type: "text", name: "contact", id: "contact" },
+            domProps: { value: _vm.form.contact },
+            on: {
+              input: function($event) {
+                if ($event.target.composing) {
+                  return
+                }
+                _vm.$set(_vm.form, "contact", $event.target.value)
+              }
+            }
+          }),
+          _vm._v(" "),
+          _c(
+            "small",
+            {
+              directives: [
+                {
+                  name: "show",
+                  rawName: "v-show",
+                  value: _vm.form.errors.has("contact"),
+                  expression: "form.errors.has('contact')"
+                }
+              ],
+              staticClass: "form-text text-danger"
             },
-            expression: "aStreet1"
-          }
-        }),
+            [_vm._v(_vm._s(_vm.form.errors.get("contact")))]
+          )
+        ]),
         _vm._v(" "),
-        _c("vs-input", {
-          attrs: { "vs-placeholder": "Street Line 2" },
-          model: {
-            value: _vm.aStreet2,
-            callback: function($$v) {
-              _vm.aStreet2 = $$v
+        _c("div", { staticClass: "form-group small" }, [
+          _c("label", { attrs: { for: "clientName" } }, [
+            _vm._v("Client Name")
+          ]),
+          _vm._v(" "),
+          _c("input", {
+            directives: [
+              {
+                name: "model",
+                rawName: "v-model",
+                value: _vm.form.clientName,
+                expression: "form.clientName"
+              }
+            ],
+            staticClass: "form-control",
+            attrs: { type: "text", name: "clientName", id: "clientName" },
+            domProps: { value: _vm.form.clientName },
+            on: {
+              input: function($event) {
+                if ($event.target.composing) {
+                  return
+                }
+                _vm.$set(_vm.form, "clientName", $event.target.value)
+              }
+            }
+          }),
+          _vm._v(" "),
+          _c(
+            "small",
+            {
+              directives: [
+                {
+                  name: "show",
+                  rawName: "v-show",
+                  value: _vm.form.errors.has("clientName"),
+                  expression: "form.errors.has('clientName')"
+                }
+              ],
+              staticClass: "form-text text-danger"
             },
-            expression: "aStreet2"
-          }
-        }),
+            [_vm._v(_vm._s(_vm.form.errors.get("clientName")))]
+          )
+        ]),
         _vm._v(" "),
-        _c("vs-input", {
-          attrs: { "vs-labll": "Zipcode", "vs-placeholder": "zip coxde" },
-          model: {
-            value: _vm.zip,
-            callback: function($$v) {
-              _vm.zip = $$v
+        _c("div", { staticClass: "form-group small" }, [
+          _c("label", { attrs: { for: "address" } }, [_vm._v("Address")]),
+          _vm._v(" "),
+          _c("input", {
+            directives: [
+              {
+                name: "model",
+                rawName: "v-model",
+                value: _vm.form.aStreet1,
+                expression: "form.aStreet1"
+              }
+            ],
+            staticClass: "form-control",
+            attrs: { type: "text", name: "aStreet1", id: "aStreet1" },
+            domProps: { value: _vm.form.aStreet1 },
+            on: {
+              input: function($event) {
+                if ($event.target.composing) {
+                  return
+                }
+                _vm.$set(_vm.form, "aStreet1", $event.target.value)
+              }
+            }
+          }),
+          _vm._v(" "),
+          _c("input", {
+            directives: [
+              {
+                name: "model",
+                rawName: "v-model",
+                value: _vm.form.aStreet2,
+                expression: "form.aStreet2"
+              }
+            ],
+            staticClass: "form-control",
+            attrs: { type: "text", name: "aStreet2", id: "aStreet2" },
+            domProps: { value: _vm.form.aStreet2 },
+            on: {
+              input: function($event) {
+                if ($event.target.composing) {
+                  return
+                }
+                _vm.$set(_vm.form, "aStreet2", $event.target.value)
+              }
+            }
+          }),
+          _vm._v(" "),
+          _c("input", {
+            directives: [
+              {
+                name: "model",
+                rawName: "v-model",
+                value: _vm.form.zip,
+                expression: "form.zip"
+              }
+            ],
+            staticClass: "form-control",
+            attrs: { type: "text", name: "zip", id: "zip", placeholder: "Zip" },
+            domProps: { value: _vm.form.zip },
+            on: {
+              input: function($event) {
+                if ($event.target.composing) {
+                  return
+                }
+                _vm.$set(_vm.form, "zip", $event.target.value)
+              }
+            }
+          }),
+          _vm._v(" "),
+          _c(
+            "small",
+            {
+              directives: [
+                {
+                  name: "show",
+                  rawName: "v-show",
+                  value: _vm.form.errors.has("aStreet1"),
+                  expression: "form.errors.has('aStreet1')"
+                }
+              ],
+              staticClass: "form-text text-danger"
             },
-            expression: "zip"
-          }
-        })
-      ],
-      1
-    ),
-    _vm._v(" "),
-    _c(
-      "div",
-      { staticClass: "form-group" },
-      [
-        _c("vs-input", {
-          attrs: {
-            "vs-label": "Contact Person",
-            "vs-placeholder": "Contact person at client side"
-          },
-          model: {
-            value: _vm.contact,
-            callback: function($$v) {
-              _vm.contact = $$v
+            [_vm._v("\n\t\t\t\tThe address field must be given.\n\t\t\t")]
+          ),
+          _vm._v(" "),
+          _c(
+            "small",
+            {
+              directives: [
+                {
+                  name: "show",
+                  rawName: "v-show",
+                  value: _vm.form.errors.has("zip"),
+                  expression: "form.errors.has('zip')"
+                }
+              ],
+              staticClass: "form-text text-danger"
             },
-            expression: "contact"
-          }
-        })
-      ],
-      1
-    ),
-    _vm._v(" "),
-    _c(
-      "div",
-      { staticClass: "form-group" },
-      [
-        _c("vs-button", { attrs: { "vs-type": "success-border" } }, [
-          _vm._v("Save")
-        ])
-      ],
-      1
+            [_vm._v(_vm._s(_vm.form.errors.get("zip")))]
+          ),
+          _vm._v(" "),
+          _c("label", [_vm._v("Country")]),
+          _vm._v(" "),
+          _c(
+            "select",
+            {
+              directives: [
+                {
+                  name: "model",
+                  rawName: "v-model",
+                  value: _vm.form.country,
+                  expression: "form.country"
+                }
+              ],
+              staticClass: "form-control",
+              on: {
+                change: function($event) {
+                  var $$selectedVal = Array.prototype.filter
+                    .call($event.target.options, function(o) {
+                      return o.selected
+                    })
+                    .map(function(o) {
+                      var val = "_value" in o ? o._value : o.value
+                      return val
+                    })
+                  _vm.$set(
+                    _vm.form,
+                    "country",
+                    $event.target.multiple ? $$selectedVal : $$selectedVal[0]
+                  )
+                }
+              }
+            },
+            _vm._l(_vm.countries, function(country, index) {
+              return _c("option", { domProps: { value: index } }, [
+                _vm._v(_vm._s(country.text))
+              ])
+            })
+          )
+        ]),
+        _vm._v(" "),
+        _c(
+          "div",
+          { staticClass: "form-group" },
+          [
+            _c(
+              "vs-button",
+              { attrs: { "vs-type": "success-border", type: "submit" } },
+              [_vm._v("Save")]
+            )
+          ],
+          1
+        )
+      ]
     )
   ])
 }
@@ -25146,7 +25538,7 @@ if (false) {
 }
 
 /***/ }),
-/* 71 */
+/* 73 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var render = function() {
@@ -25170,125 +25562,6 @@ var render = function() {
           },
           [_vm._v("Add New Client")]
         )
-      ],
-      1
-    ),
-    _vm._v(" "),
-    _c(
-      "div",
-      { staticClass: "form-group small" },
-      [
-        _c("vs-input", {
-          class: { "is-invalid": _vm.errors.has("clientName") },
-          attrs: {
-            "vs-label": "Client Name",
-            "vs-placeholder": "Name of client"
-          },
-          model: {
-            value: _vm.clientName,
-            callback: function($$v) {
-              _vm.clientName = $$v
-            },
-            expression: "clientName"
-          }
-        })
-      ],
-      1
-    ),
-    _vm._v(" "),
-    _c(
-      "div",
-      { staticClass: "form-group small" },
-      [
-        _c("vs-input", {
-          attrs: { "vs-label": "Address", "vs-placeholder": "Street Line 1" },
-          model: {
-            value: _vm.aStreet1,
-            callback: function($$v) {
-              _vm.aStreet1 = $$v
-            },
-            expression: "aStreet1"
-          }
-        }),
-        _vm._v(" "),
-        _c("vs-input", {
-          attrs: { "vs-placeholder": "Street Line 2" },
-          model: {
-            value: _vm.aStreet2,
-            callback: function($$v) {
-              _vm.aStreet2 = $$v
-            },
-            expression: "aStreet2"
-          }
-        }),
-        _vm._v(" "),
-        _c("vs-input", {
-          attrs: { "vs-label": "Zipcode", "vs-placeholder": "zip coxde" },
-          model: {
-            value: _vm.zip,
-            callback: function($$v) {
-              _vm.zip = $$v
-            },
-            expression: "zip"
-          }
-        }),
-        _vm._v(" "),
-        _c("label", [_vm._v("Country")]),
-        _vm._v(" "),
-        _c(
-          "select",
-          {
-            directives: [
-              {
-                name: "model",
-                rawName: "v-model",
-                value: _vm.country,
-                expression: "country"
-              }
-            ],
-            on: {
-              change: function($event) {
-                var $$selectedVal = Array.prototype.filter
-                  .call($event.target.options, function(o) {
-                    return o.selected
-                  })
-                  .map(function(o) {
-                    var val = "_value" in o ? o._value : o.value
-                    return val
-                  })
-                _vm.country = $event.target.multiple
-                  ? $$selectedVal
-                  : $$selectedVal[0]
-              }
-            }
-          },
-          _vm._l(_vm.countries, function(country) {
-            return _c("option", { domProps: { value: country.value } }, [
-              _vm._v(_vm._s(country.text))
-            ])
-          })
-        )
-      ],
-      1
-    ),
-    _vm._v(" "),
-    _c(
-      "div",
-      { staticClass: "form-group small" },
-      [
-        _c("vs-input", {
-          attrs: {
-            "vs-label": "Contact Person",
-            "vs-placeholder": "Contact person at client side"
-          },
-          model: {
-            value: _vm.contact,
-            callback: function($$v) {
-              _vm.contact = $$v
-            },
-            expression: "contact"
-          }
-        })
       ],
       1
     ),
@@ -25322,15 +25595,15 @@ if (false) {
 }
 
 /***/ }),
-/* 72 */
+/* 74 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var disposed = false
 var normalizeComponent = __webpack_require__(0)
 /* script */
-var __vue_script__ = __webpack_require__(73)
+var __vue_script__ = __webpack_require__(75)
 /* template */
-var __vue_template__ = __webpack_require__(74)
+var __vue_template__ = __webpack_require__(76)
 /* template functional */
 var __vue_template_functional__ = false
 /* styles */
@@ -25369,7 +25642,7 @@ module.exports = Component.exports
 
 
 /***/ }),
-/* 73 */
+/* 75 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -25400,7 +25673,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 });
 
 /***/ }),
-/* 74 */
+/* 76 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var render = function() {
@@ -25443,15 +25716,15 @@ if (false) {
 }
 
 /***/ }),
-/* 75 */
+/* 77 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var disposed = false
 var normalizeComponent = __webpack_require__(0)
 /* script */
-var __vue_script__ = __webpack_require__(76)
+var __vue_script__ = __webpack_require__(78)
 /* template */
-var __vue_template__ = __webpack_require__(77)
+var __vue_template__ = __webpack_require__(79)
 /* template functional */
 var __vue_template_functional__ = false
 /* styles */
@@ -25490,7 +25763,7 @@ module.exports = Component.exports
 
 
 /***/ }),
-/* 76 */
+/* 78 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -25522,7 +25795,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 });
 
 /***/ }),
-/* 77 */
+/* 79 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var render = function() {
@@ -25578,19 +25851,19 @@ if (false) {
 }
 
 /***/ }),
-/* 78 */
+/* 80 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var disposed = false
 function injectStyle (ssrContext) {
   if (disposed) return
-  __webpack_require__(79)
+  __webpack_require__(81)
 }
 var normalizeComponent = __webpack_require__(0)
 /* script */
-var __vue_script__ = __webpack_require__(81)
+var __vue_script__ = __webpack_require__(83)
 /* template */
-var __vue_template__ = __webpack_require__(82)
+var __vue_template__ = __webpack_require__(84)
 /* template functional */
 var __vue_template_functional__ = false
 /* styles */
@@ -25629,13 +25902,13 @@ module.exports = Component.exports
 
 
 /***/ }),
-/* 79 */
+/* 81 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // style-loader: Adds some css to the DOM by adding a <style> tag
 
 // load the styles
-var content = __webpack_require__(80);
+var content = __webpack_require__(82);
 if(typeof content === 'string') content = [[module.i, content, '']];
 if(content.locals) module.exports = content.locals;
 // add the styles to the DOM
@@ -25655,7 +25928,7 @@ if(false) {
 }
 
 /***/ }),
-/* 80 */
+/* 82 */
 /***/ (function(module, exports, __webpack_require__) {
 
 exports = module.exports = __webpack_require__(2)(false);
@@ -25669,7 +25942,7 @@ exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\
 
 
 /***/ }),
-/* 81 */
+/* 83 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -25730,7 +26003,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 });
 
 /***/ }),
-/* 82 */
+/* 84 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var render = function() {
@@ -25870,7 +26143,7 @@ if (false) {
 }
 
 /***/ }),
-/* 83 */
+/* 85 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var disposed = false
@@ -25878,7 +26151,7 @@ var normalizeComponent = __webpack_require__(0)
 /* script */
 var __vue_script__ = null
 /* template */
-var __vue_template__ = __webpack_require__(84)
+var __vue_template__ = __webpack_require__(86)
 /* template functional */
 var __vue_template_functional__ = false
 /* styles */
@@ -25917,7 +26190,7 @@ module.exports = Component.exports
 
 
 /***/ }),
-/* 84 */
+/* 86 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var render = function() {
@@ -25956,7 +26229,7 @@ if (false) {
 }
 
 /***/ }),
-/* 85 */
+/* 87 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var disposed = false
@@ -25964,7 +26237,7 @@ var normalizeComponent = __webpack_require__(0)
 /* script */
 var __vue_script__ = null
 /* template */
-var __vue_template__ = __webpack_require__(86)
+var __vue_template__ = __webpack_require__(88)
 /* template functional */
 var __vue_template_functional__ = false
 /* styles */
@@ -26003,7 +26276,7 @@ module.exports = Component.exports
 
 
 /***/ }),
-/* 86 */
+/* 88 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var render = function() {
@@ -26080,7 +26353,7 @@ if (false) {
 }
 
 /***/ }),
-/* 87 */
+/* 89 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var disposed = false
@@ -26088,7 +26361,7 @@ var normalizeComponent = __webpack_require__(0)
 /* script */
 var __vue_script__ = null
 /* template */
-var __vue_template__ = __webpack_require__(88)
+var __vue_template__ = __webpack_require__(90)
 /* template functional */
 var __vue_template_functional__ = false
 /* styles */
@@ -26127,7 +26400,7 @@ module.exports = Component.exports
 
 
 /***/ }),
-/* 88 */
+/* 90 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var render = function() {
@@ -26166,19 +26439,19 @@ if (false) {
 }
 
 /***/ }),
-/* 89 */
+/* 91 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var disposed = false
 function injectStyle (ssrContext) {
   if (disposed) return
-  __webpack_require__(90)
+  __webpack_require__(92)
 }
 var normalizeComponent = __webpack_require__(0)
 /* script */
-var __vue_script__ = __webpack_require__(92)
+var __vue_script__ = __webpack_require__(94)
 /* template */
-var __vue_template__ = __webpack_require__(93)
+var __vue_template__ = __webpack_require__(95)
 /* template functional */
 var __vue_template_functional__ = false
 /* styles */
@@ -26217,13 +26490,13 @@ module.exports = Component.exports
 
 
 /***/ }),
-/* 90 */
+/* 92 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // style-loader: Adds some css to the DOM by adding a <style> tag
 
 // load the styles
-var content = __webpack_require__(91);
+var content = __webpack_require__(93);
 if(typeof content === 'string') content = [[module.i, content, '']];
 if(content.locals) module.exports = content.locals;
 // add the styles to the DOM
@@ -26243,7 +26516,7 @@ if(false) {
 }
 
 /***/ }),
-/* 91 */
+/* 93 */
 /***/ (function(module, exports, __webpack_require__) {
 
 exports = module.exports = __webpack_require__(2)(false);
@@ -26257,7 +26530,7 @@ exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\
 
 
 /***/ }),
-/* 92 */
+/* 94 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -26297,7 +26570,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 });
 
 /***/ }),
-/* 93 */
+/* 95 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var render = function() {
@@ -26352,7 +26625,7 @@ if (false) {
 }
 
 /***/ }),
-/* 94 */
+/* 96 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var render = function() {
@@ -26461,7 +26734,7 @@ if (false) {
 }
 
 /***/ }),
-/* 95 */
+/* 97 */
 /***/ (function(module, exports) {
 
 // removed by extract-text-webpack-plugin

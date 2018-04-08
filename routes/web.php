@@ -21,3 +21,5 @@ Route::get('/bids', 'BidsController@index')->name('bids');
 Route::get('/countries', function(Country $cnty) {
 	return $cnty->countryCollection();	
 });
+
+Route::post('/clients', 'ClientController@store');

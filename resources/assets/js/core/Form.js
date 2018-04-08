@@ -13,7 +13,7 @@
             this[field] = data[field];
         }
 
-        this.errors = new Errors();
+        this.errors = new Error();
     }
 
 
@@ -123,7 +123,7 @@
      *
      * @param {object} errors
      */
-    onFail(errors) {
+    onFail(errors) {        
         this.errors.record(errors);
     }
 }
