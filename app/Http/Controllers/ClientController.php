@@ -35,7 +35,18 @@ class ClientController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $validatedData = $request->validate([
+            'clientName' => 'bail|required',
+            'aStreet1' => 'required',
+            'country' => 'required',
+            'zip' => 'required',
+            'contact' => 'required'
+        ]);
+
+        Client::create($validatedData);
+
+        return back()->with('status', 'Client Added!');
+
     }
 
     /**

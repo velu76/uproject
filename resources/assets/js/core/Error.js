@@ -12,7 +12,7 @@ export default class Errors {
      *
      * @param {string} field
      */
-    has(field) {
+    has(field) {        
         return this.errors.hasOwnProperty(field);
     }
 
@@ -43,7 +43,7 @@ export default class Errors {
      * @param {object} errors
      */
     record(errors) {
-        this.errors = errors;
+        this.errors = errors.errors;
     }
 
 
@@ -53,6 +53,7 @@ export default class Errors {
      * @param {string|null} field
      */
     clear(field) {
+        
         if (field) {
             delete this.errors[field];
 
