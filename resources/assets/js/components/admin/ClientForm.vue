@@ -31,7 +31,7 @@
 	
 
 	<div class="form-group">
-		<vs-button vs-type="success-border" type="submit">Save</vs-button>
+		<button type="submit" class="btn btn-success btn-sm" :disabled="form.errors.any()">Save</button>		
 	</div>
 	</form>
 </div>
@@ -62,11 +62,8 @@ export default {
 				.then(data => console.log(data))
 				.catch(err => console.log("The form has error " + err));
 		},
-
-		setBorder() {
-			if(this.form.errors.has('clientName')) return 'danger';
-
-			return 'default';	
+		checkError() {
+		return this.form.errors.any();
 		}
 	},
 
