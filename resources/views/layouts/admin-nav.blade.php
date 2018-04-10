@@ -30,6 +30,10 @@
 		</li>
 
 		<li class="nav-item">
+			<a class="nav-link @yield('admin')" href="{{route('admin')}}"><em class="fa fa-snowflake-o"></em>Site Admin</a>
+		</li>
+
+		<li class="nav-item">
 			<a class="nav-link" href="tables.html"><em class="fa fa-search-plus"></em>Advance Search</a>
 		</li>
 		

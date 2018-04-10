@@ -17,6 +17,8 @@ Route::get('/', function () {
 });
 
 Route::get('/bids', 'BidsController@index')->name('bids');
+Route::get('/admin', 'AdminController@index')->name('admin');
+Route::get('/admin/clients', 'AdminController@clients')->name('admin_clients');
 
 Route::get('/countries', function(Country $cnty) {
 	return $cnty->countryCollection();	

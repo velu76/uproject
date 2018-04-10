@@ -14214,3 +14214,11 @@ thead {
   font-size: 4rem;
 }
 
+.bread-crumbs {
+  font-size: 0.9rem;
+  padding: 5px 5px;
+  margin-top: 3px;
+  margin-bottom: 8px;
+  color: #cc3333;
+}
+

@@ -2,7 +2,7 @@
 
 namespace upro\Http\Controllers;
 
-use upro\Client;
+use upro\Admin\Client;
 use Illuminate\Http\Request;
 
 class ClientController extends Controller
@@ -43,7 +43,7 @@ class ClientController extends Controller
             'contact' => 'required'
         ]);
 
-        Client::create($validatedData);
+        // Client::create($validatedData);
 
         return back()->with('status', 'Client Added!');
 
