@@ -17,7 +17,7 @@ window.Vue = require('vue');
  */
 
 import BidForm from './components/BidForm';
-
+import ClientForm from './components/admin/ClientForm';
 
 const app = new Vue({
     el: '#app',
@@ -27,7 +27,8 @@ const app = new Vue({
     },
 
     components: {
-    	'bidform':BidForm
+    	'bidform':BidForm,
+        'clientform': ClientForm
     },
 
     methods: {

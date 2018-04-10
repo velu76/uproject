@@ -3,6 +3,7 @@
 namespace upro\Http\Controllers;
 
 use upro\Admin\Client;
+use upro\Admin\Address;
 use Illuminate\Http\Request;
 
 class ClientController extends Controller
@@ -35,15 +36,31 @@ class ClientController extends Controller
      */
     public function store(Request $request)
     {
+        // Validate Form data
         $validatedData = $request->validate([
-            'clientName' => 'bail|required',
-            'aStreet1' => 'required',
+            'name' => 'bail|required',
+            'street1' => 'required',
+            'street2' => 'min:0|max:100',
             'country' => 'required',
-            'zip' => 'required',
-            'contact' => 'required'
+            'zip' => 'required'            
         ]);
 
-        // Client::create($validatedData);
+        // Create a new address but don't save it to DB yet.
+        $address = new Address([
+            'street1' => $request['street1'],
+            'street2' => $request['street2'],
+            'zip' => $request['zip'],
+            'country' => $request['country']
+        ]);
+
+        // Create a client but don't save it to DB yet.
+        $client = new Client([
+            'name' => $request['name']
+        ]);
+
+        // Now update relation and save to DB.
+        $client->address()->save($address);
+        $client->save();
 
         return back()->with('status', 'Client Added!');
 

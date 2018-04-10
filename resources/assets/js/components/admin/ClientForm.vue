@@ -1,24 +1,18 @@
 <template>
 	<div>
 		<form @submit.prevent="onSubmit" @keydown="form.errors.clear($event.target.name)">
-		<div class="form-group small">
-			<label for="contact">Contact Person</label>
-			<input type="text" name="contact" class="form-control" id="contact" v-model="form.contact">			
-			<small v-show="form.errors.has('contact')" 
-				  class="form-text text-danger">{{form.errors.get('contact')}}</small>
-		</div>
-
+		
 		<div class="form-group small">			
-			<label for="clientName">Client Name</label>
-			<input type="text" name="clientName" class="form-control" id="clientName" v-model="form.clientName">	
-			<small v-show="form.errors.has('clientName')" class="form-text text-danger">{{form.errors.get('clientName')}}</small>
+			<label for="name">Client Name</label>
+			<input type="text" name="name" class="form-control" id="name" v-model="form.name">	
+			<small v-show="form.errors.has('name')" class="form-text text-danger">{{form.errors.get('name')}}</small>
 		</div>
 		<div class="form-group small">
 			<label for="address">Address</label>
-			<input type="text" name="aStreet1" class="form-control" id="aStreet1" v-model="form.aStreet1">
-			<input type="text" name="aStreet2" class="form-control" id="aStreet2" v-model="form.aStreet2">
+			<input type="text" name="street1" class="form-control" id="street1" v-model="form.street1">
+			<input type="text" name="street2" class="form-control" id="street2" v-model="form.street2">
 			<input type="text" name="zip" class="form-control" id="zip" v-model="form.zip" placeholder="Zip">
-			<small v-show="form.errors.has('aStreet1')" class="form-text text-danger">
+			<small v-show="form.errors.has('street1')" class="form-text text-danger">
 				The address field must be given.
 			</small>
 			<small v-show="form.errors.has('zip')" class="form-text text-danger">{{form.errors.get('zip')}}</small>
@@ -44,9 +38,9 @@ export default {
 		return {
 			countries:[],
 			form: new Form({
-				clientName: '',
-				aStreet1: '',
-				aStreet2: '',
+				name: '',
+				street1: '',
+				street2: '',
 				zip: '',
 				country:1,			
 				contact:''
