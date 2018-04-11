@@ -53,6 +53,7 @@ class ClientController extends Controller
             'country' => $request['country']
         ]);
 
+
         // Create a client but don't save it to DB yet.
         $client = new Client([
             'name' => $request['name']
