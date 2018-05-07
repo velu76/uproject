@@ -18,7 +18,7 @@
 			<small v-show="form.errors.has('zip')" class="form-text text-danger">{{form.errors.get('zip')}}</small>
 			
 			<label>Country</label>
-			<select class="form-control" v-model="form.country">
+			<select class="form-control" v-model="form.country_id">
 				<option v-for="country,index in countries" :value="index">{{country.text}}</option>
 			</select>			
 		</div>
@@ -42,7 +42,7 @@ export default {
 				street1: '',
 				street2: '',
 				zip: '',
-				country:1,			
+				country_id:1,			
 				contact:''
 			})
 

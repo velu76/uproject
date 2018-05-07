@@ -41,7 +41,7 @@ class ClientController extends Controller
             'name' => 'bail|required',
             'street1' => 'required',
             'street2' => 'min:0|max:100',
-            'country' => 'required',
+            'country_id' => 'required',
             'zip' => 'required'            
         ]);
 
@@ -49,8 +49,8 @@ class ClientController extends Controller
         $address = new Address([
             'street1' => $request['street1'],
             'street2' => $request['street2'],
-            'zip' => $request['zip'],
-            'country' => $request['country']
+            'zipcode' => $request['zip'],
+            'country_id' => $request['country_id']
         ]);
 
 
@@ -59,9 +59,9 @@ class ClientController extends Controller
             'name' => $request['name']
         ]);
 
-        // Now update relation and save to DB.
-        $client->address()->save($address);
+        // Now update relation and save to DB.      
         $client->save();
+        $client->address()->save($address);
 
         return back()->with('status', 'Client Added!');
 
