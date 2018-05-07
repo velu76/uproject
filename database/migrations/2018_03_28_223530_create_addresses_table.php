@@ -18,9 +18,7 @@ class CreateAddressesTable extends Migration
             $table->string('street1',240);
             $table->string('street2',240);
             $table->integer('country_id')->unsigned()->default(196);
-            $table->foreign('country_id')->references('id')->on('countries');
-            $table->integer('client_id')->unsigned()->nullable();
-            $table->foreign('client_id')->references('id')->on('clients');
+            $table->foreign('country_id')->references('id')->on('countries');            
             $table->string('zipcode',10)->default('unknown');
             $table->timestamps();
         });
