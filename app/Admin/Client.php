@@ -12,4 +12,14 @@ class Client extends Model
     {
     	return $this->hasOne(Address::class);
     }
+
+    public function clientsCollection() 
+    {
+		$clients = $this->all();	
+		$clnts = [];
+		foreach($clients as $client){	
+			$clnts[$client->id] = ['text'=>$client->name, 'value'=>$client->id];				
+		}	
+		return $clnts;
+  }
 }

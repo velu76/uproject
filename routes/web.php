@@ -1,6 +1,7 @@
 <?php
 
 use upro\Admin\Util\Country;
+use upro\Admin\Client;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -22,6 +23,10 @@ Route::get('/admin/clients', 'AdminController@clients')->name('admin_clients');
 
 Route::get('/countries', function(Country $cnty) {	
 	return $cnty->countryCollection();	
+});
+
+Route::get('/getClients', function(Client $client) {	
+	return $client->clientsCollection();
 });
 
 Route::post('/clients', 'ClientController@store');
