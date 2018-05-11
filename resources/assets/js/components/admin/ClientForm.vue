@@ -53,12 +53,12 @@ export default {
 		onSubmit() {
 			console.log('form submitted!');
 			this.form.post('/clients')
-				.then(data => console.log(data))
+				.then(data => this.$emit('newClientAdded'))
 				.catch(err => console.log("The form has error " + err));
 		},
 		checkError() {
 		return this.form.errors.any();
-		}
+		},
 	},
 
 	beforeCreate() {

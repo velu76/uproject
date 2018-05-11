@@ -4,6 +4,8 @@ namespace upro\Http\Controllers;
 
 use upro\Admin\Client;
 use upro\Admin\Address;
+use upro\Events\NewClientAdded;
+
 use Illuminate\Http\Request;
 
 class ClientController extends Controller
@@ -63,7 +65,7 @@ class ClientController extends Controller
         $client->save();
         $client->address()->save($address);
 
-        return back()->with('status', 'Client Added!');
+        event(new NewClientAdded());
 
     }
 

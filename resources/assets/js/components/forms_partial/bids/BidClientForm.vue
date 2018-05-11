@@ -14,7 +14,7 @@
 			<vs-button vs-type="primary-border" @click="newClientFormActive=true">Add New Client</vs-button>
 		</div>		
 	<div id="newClientForm" v-show="newClientFormActive">
-		 <NewClientForm></NewClientForm>
+		 <NewClientForm v-on:newClientAdded="updateClients"></NewClientForm>
 	</div>
 
 </div>
@@ -37,19 +37,26 @@ export default {
 			listReady: false,			
 		};
 	},
+
+	methods: {
+		updateClients() {
+			axios.get('/getClients').then(response => {
+				this.clients = response.data;	
+				console.log(response.data);			
+			}).catch(e=>{
+				console.log("Error:" + e);
+			});	
+		}
+	},
 	
 
 	beforeCreate() {		
-		axios.get('/getClients').then(response => {
+	axios.get('/getClients').then(response => {
 			this.clients = response.data;	
 			console.log(response.data);			
 		}).catch(e=>{
 			console.log("Error:" + e);
-		});
-	},
-
-	methods: {
-	}
-	
+		});	
+	}	
 }
 </script>

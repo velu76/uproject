@@ -13,8 +13,8 @@ class EventServiceProvider extends ServiceProvider
      * @var array
      */
     protected $listen = [
-        'upro\Events\Event' => [
-            'upro\Listeners\EventListener',
+        'upro\Events\NewClientAdded' => [
+            'upro\Listeners\NewClientNotification',
         ],
     ];
 

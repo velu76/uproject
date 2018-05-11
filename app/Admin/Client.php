@@ -15,7 +15,8 @@ class Client extends Model
 
     public function clientsCollection() 
     {
-		$clients = $this->all();	
+		$clients = $this->latest('created_at')->get();
+        //var_dump($clients);	
 		$clnts = [];
 		foreach($clients as $client){	
 			$clnts[$client->id] = ['text'=>$client->name, 'value'=>$client->id];				
