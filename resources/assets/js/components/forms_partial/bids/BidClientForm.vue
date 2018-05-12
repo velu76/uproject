@@ -13,11 +13,7 @@
 		<div class="form-group small">
 			<vs-button vs-type="primary-border" @click="activateForm">Add New Client</vs-button>
 		</div>		
-
-		<div>
-			<p>{{status}}</p>
-		</div>
-
+	
 		<div id="newClientForm" v-show="newClientFormActive">
 			 <NewClientForm v-on:newClientAdded="updateClients" v-if="newClientFormActive"></NewClientForm>
 		</div>
@@ -48,7 +44,7 @@ export default {
 			axios.get('/getClients').then(response => {				
 				this.clients = response.data;	
 				this.activateForm();
-				this.status = 'New client added!';								
+				this.$toasted.show('New client added!').goAway(1500);							
 			}).catch(e=>{
 				console.log("Error:" + e);
 			});	

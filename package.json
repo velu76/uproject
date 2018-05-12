@@ -20,6 +20,7 @@
         "font-awesome": "^4.7.0",
         "vee-validate": "^2.0.6",
         "vue-flatpickr-component": "^7.0.0",
+        "vue-toasted": "^1.1.24",
         "vuesax": "^3.0.2"
     }
 }
