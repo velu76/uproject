@@ -15,12 +15,12 @@ class Client extends Model
 
     public function clientsCollection() 
     {
-		$clients = $this->latest('created_at')->get();
-        //var_dump($clients);	
-		$clnts = [];
-		foreach($clients as $client){	
-			$clnts[$client->id] = ['text'=>$client->name, 'value'=>$client->id];				
-		}	
-		return $clnts;
+		$clients = $this->latest('created_at')->get();        
+		// $clnts = [];
+		// foreach($clients as $client){	
+		// 	$clnts[$client->id] = ['text'=>$client->name, 'value'=>$client->id];				
+		// }	
+  //       // var_dump($clnts);
+		return $clients;
   }
 }

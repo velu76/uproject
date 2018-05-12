@@ -4,8 +4,8 @@
 			<div class="form-group small">
 				<label>Client</label>
 				<select class="form-control" v-model="client_id">
-					<option v-for="client,index in clients" :value="index">{{client.text}}</option>
-				</select>			
+					<option v-for="(client,id) in clients" :value="id">{{client.name}}</option>
+				</select>							
 			</div>
 		</div>
 
@@ -40,20 +40,17 @@ export default {
 
 	methods: {
 		updateClients() {
-			axios.get('/getClients').then(response => {
-				this.clients = response.data;	
-				console.log(response.data);			
+			axios.get('/getClients').then(response => {				
+				this.clients = response.data;					
 			}).catch(e=>{
 				console.log("Error:" + e);
 			});	
 		}
-	},
-	
+	},	
 
 	beforeCreate() {		
-	axios.get('/getClients').then(response => {
-			this.clients = response.data;	
-			console.log(response.data);			
+	axios.get('/getClients').then(response => {	
+			this.clients = response.data;			
 		}).catch(e=>{
 			console.log("Error:" + e);
 		});	
