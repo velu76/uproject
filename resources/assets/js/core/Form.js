@@ -112,7 +112,7 @@
      * @param {object} data
      */
     onSuccess(data) {
-        alert(data.message); // temporary
+        // alert(data.message); // temporary
 
         this.reset();
     }
