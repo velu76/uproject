@@ -50,8 +50,7 @@ export default {
 	},
 
 	methods: {
-		onSubmit() {
-			console.log('form submitted!');
+		onSubmit() {			
 			this.form.post('/clients')
 				.then(data => this.$emit('newClientAdded'))
 				.catch(err => console.log("The form has error " + err));
