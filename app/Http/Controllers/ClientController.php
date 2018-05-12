@@ -17,7 +17,6 @@ class ClientController extends Controller
      */
     public function index()
     {
-        //
     }
 
     /**
@@ -64,9 +63,7 @@ class ClientController extends Controller
         // Now update relation and save to DB.      
         $client->save();
         $client->address()->save($address);
-
-        event(new NewClientAdded());
-
+        return view('bids.index');     
     }
 
     /**
