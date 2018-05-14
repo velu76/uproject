@@ -1,6 +1,9 @@
 <?php
 
 use upro\Admin\Util\Country;
+use upro\Source;
+use upro\Category;
+use upro\Status;
 use upro\Admin\Client;
 /*
 |--------------------------------------------------------------------------
@@ -27,6 +30,18 @@ Route::get('/countries', function(Country $cnty) {
 
 Route::get('/getClients', function(Client $client) {	
 	return $client->clientsCollection();
+});
+
+Route::get('/getSources', function(Source $source) {	
+	return $source->sourcesCollection();
+});
+
+Route::get('/getCategories', function(Category $category) {	
+	return $category->categoriesCollection();
+});
+
+Route::get('/getStatuses', function(Status $status) {	
+	return $status->statusesCollection();
 });
 
 Route::post('/clients', 'ClientController@store');

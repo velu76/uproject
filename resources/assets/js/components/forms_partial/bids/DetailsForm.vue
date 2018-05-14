@@ -16,21 +16,21 @@
 		<div class="form-group">
 			<label>Project Source</label>
 			<select class="form-control">
-				<option>Default select</option>
+					<option v-for="(source,id) in sources" :value="id">{{source.text}}</option>
 			</select>
 		</div>
 
 		<div class="form-group">
 			<label>Project Category</label>
 			<select class="form-control">
-				<option>Default select</option>
+				<option v-for="(category,id) in categories" :value="id">{{category.text}}</option>
 			</select>
 		</div>
 
 		<div class="form-group">
 			<label>Project Status</label>
 			<select class="form-control">
-				<option>Default select</option>
+				<option v-for="(status,id) in statuses" :value="id">{{status.text}}</option>
 			</select>
 		</div>
 
@@ -70,6 +70,9 @@ export default {
 		return {
 			esdate: new Date(),		
 			eedate: new Date(),	
+			sources: [],
+			categories: [],
+			statuses: [],		
 
 			config: {
 				start: {
@@ -98,9 +101,26 @@ export default {
 		onEndChange(selectedDates, dateStr,instance) {
 			this.$set(this.config.start, 'maxDate', dateStr);
 		},
+	},
 
-		
+	beforeCreate() {		
+		axios.get('/getSources').then(response => {	
+				this.sources = response.data;			
+			}).catch(e=>{
+				console.log("Error:" + e);
+			});	
 
-	}
+		axios.get('/getCategories').then(response => {	
+				this.categories = response.data;			
+			}).catch(e=>{
+				console.log("Error:" + e);
+			});
+
+		axios.get('/getStatuses').then(response => {	
+				this.statuses = response.data;			
+			}).catch(e=>{
+				console.log("Error:" + e);
+			});
+	}	
 }
 </script>
