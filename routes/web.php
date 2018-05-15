@@ -23,6 +23,7 @@ Route::get('/', function () {
 Route::get('/bids', 'BidsController@index')->name('bids');
 Route::get('/admin', 'AdminController@index')->name('admin');
 Route::get('/admin/clients', 'AdminController@clients')->name('admin_clients');
+Route::get('/admin/sources', 'AdminController@sources')->name('admin_sources');
 
 Route::get('/countries', function(Country $cnty) {	
 	return $cnty->countryCollection();	

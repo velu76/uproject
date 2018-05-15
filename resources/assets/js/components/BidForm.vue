@@ -75,7 +75,7 @@ export default {
 		FinanceForm,
 		LegalForm,
 		StatusForm,
-		DocumentsForm,
+		DocumentsForm,		
 		CardComponent
 	},
 

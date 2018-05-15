@@ -15,4 +15,9 @@ class AdminController extends Controller
     {
     	return view('admin.clients');
     }
+
+    public function sources()
+    {
+    	return view('admin.sources');
+    }
 }

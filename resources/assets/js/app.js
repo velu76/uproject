@@ -19,7 +19,7 @@ Vue.use(Toasted);
 
 import BidForm from './components/BidForm';
 import ClientForm from './components/admin/ClientForm';
-
+import SourceIndex from './components/admin/SourceIndex';
 
 const app = new Vue({
     el: '#app',
@@ -30,7 +30,8 @@ const app = new Vue({
 
     components: {
     	'bidform':BidForm,
-        'clientform': ClientForm
+        'clientform': ClientForm,
+        'sourceindex': SourceIndex,
     },
 
     methods: {

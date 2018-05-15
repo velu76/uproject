@@ -15,7 +15,7 @@
 			</div>
 
 			<div class="col">
-				<a href="#" class="btn btn-primary">Consortiums</a>				
+				<a href="{{route('admin_sources')}}" class="btn btn-primary">Sources</a>	
 			</div>
 
 			<div class="col">				

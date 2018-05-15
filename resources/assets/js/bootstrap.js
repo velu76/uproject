@@ -16,10 +16,13 @@ import VeeValidate from 'vee-validate';
 import Vuesax from 'vuesax';
 import 'vuesax/dist/vuesax.css';
 
+import Datatable from 'vue2-datatable-component';
+
 
 Vue.use(flatPickr);
 Vue.use(VeeValidate);
 Vue.use(Vuesax);
+Vue.use(Datatable);
 
 window.axios = require('axios');
 
