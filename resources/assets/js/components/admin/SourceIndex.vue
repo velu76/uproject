@@ -7,10 +7,13 @@
 <script>
 	export default {
 		data: () => ({
+			fixHeaderAndSetBodyMaxHeight:200,
+			tblStyle: 'table-layout: fixed',
+			tblClass: 'table-bordered',
 			columns: [
 				{title: 'Source Name', field: 'text', sortable: true },
-				{title: 'Created', field: 'created_at', sortable: true},
-				{title: 'Updated', field: 'updated_at', sortable: true}
+				
+				{title: 'Operation', tdComp: 'Opt', visible: true}
 			],
 			data: [],
 			total: 0,

@@ -13,16 +13,10 @@ class Source extends Model
 
   public function dtsources($query)
   {
-  	$limit = $query['query']['limit'];
-    $offset = $query['query']['offset'];
-    $sort =  $query['query']['sort'];
-    $order = $query['query']['order'];
-	
-	if ($sort == null)
-		$sort = 'text';
-	if ($order == null)
-		$order = 'asc';
-	
+  	$limit = $query['query']['limit'] ?: 5;
+    $offset = $query['query']['offset'] ?: 0;
+    $sort =  $query['query']['sort'] ?: 'text';
+    $order = $query['query']['order'] ?: 'asc';	
 
   	return $this->orderBy($sort,$order)
   				->offset($offset)
