@@ -1,5 +1,6 @@
-<template>
-	<div>    		
+<template>	
+	<div> 
+		<code>{{ query }}</code>   		
 	    <datatable v-bind="$data" />
   	</div>
 </template>
@@ -7,9 +8,7 @@
 <script>
 	export default {
 		data: () => ({
-			fixHeaderAndSetBodyMaxHeight:200,
-			tblStyle: 'table-layout: fixed',
-			tblClass: 'table-bordered',
+			pageSizeOptions: [5,10,15,20],
 			columns: [
 				{title: 'Source Name', field: 'text', sortable: true },
 				
@@ -17,17 +16,20 @@
 			],
 			data: [],
 			total: 0,
-			query: {}
+			query: {},
+						
 		}),
 
 		watch: {
 			query: {
 				handler (query) {
 					axios.post('/admin/getdtsources',{query}).then(response => {
-						this.data = response.data;										
+						this.data = response.data.data;	
+						this.total = response.data.total;
+
 					}).catch(e=>{
 					console.log("Error:" + e);
-					});
+					})
 				},
 				deep: true
 			}

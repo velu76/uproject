@@ -19,8 +19,7 @@ class Source extends Model
     $order = $query['query']['order'] ?: 'asc';	
 
   	return $this->orderBy($sort,$order)
-  				->offset($offset)
-  				->limit($limit)
-  				->get();
+  				->offset($offset)  				
+  				->paginate($limit);
   }
 }
