@@ -24,6 +24,7 @@ Route::get('/bids', 'BidsController@index')->name('bids');
 Route::get('/admin', 'AdminController@index')->name('admin');
 Route::get('/admin/clients', 'AdminController@clients')->name('admin_clients');
 Route::get('/admin/sources', 'AdminController@sources')->name('admin_sources');
+Route::post('/admin/getdtsources', 'AdminController@getDTsources');
 
 Route::get('/countries', function(Country $cnty) {	
 	return $cnty->countryCollection();	
@@ -36,6 +37,7 @@ Route::get('/getClients', function(Client $client) {
 Route::get('/getSources', function(Source $source) {	
 	return $source->sourcesCollection();
 });
+
 
 Route::get('/getCategories', function(Category $category) {	
 	return $category->categoriesCollection();

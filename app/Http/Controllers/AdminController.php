@@ -3,6 +3,7 @@
 namespace upro\Http\Controllers;
 
 use Illuminate\Http\Request;
+use upro\Source;
 
 class AdminController extends Controller
 {
@@ -20,4 +21,11 @@ class AdminController extends Controller
     {
     	return view('admin.sources');
     }
+
+    public function getDTsources(Request $request, Source $source)
+    {
+        $query = $request->all();
+        return $source->dtsources($query);
+    }
+
 }

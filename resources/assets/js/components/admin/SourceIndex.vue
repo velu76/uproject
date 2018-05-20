@@ -1,6 +1,5 @@
 <template>
-	<div>    
-		<code>query: {{ query }}</code>
+	<div>    		
 	    <datatable v-bind="$data" />
   	</div>
 </template>
@@ -9,7 +8,7 @@
 	export default {
 		data: () => ({
 			columns: [
-				{title: 'Text', field: 'text', sortable: true },
+				{title: 'Source Name', field: 'text', sortable: true },
 				{title: 'Created', field: 'created_at', sortable: true},
 				{title: 'Updated', field: 'updated_at', sortable: true}
 			],
@@ -21,7 +20,7 @@
 		watch: {
 			query: {
 				handler (query) {
-					axios.get('/getSources').then(response => {
+					axios.post('/admin/getdtsources',{query}).then(response => {
 						this.data = response.data;										
 					}).catch(e=>{
 					console.log("Error:" + e);

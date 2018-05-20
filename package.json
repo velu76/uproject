@@ -11,17 +11,17 @@
   },
   "devDependencies": {
     "axios": "^0.18",
-    "cross-env": "^5.1",
+    "cross-env": "^5.1.5",
     "laravel-mix": "^2.0",
     "vue": "^2.5.7"
   },
   "dependencies": {
-    "bootstrap": "^4.0.0",
+    "bootstrap": "^4.1.1",
     "font-awesome": "^4.7.0",
-    "vee-validate": "^2.0.6",
-    "vue-flatpickr-component": "^7.0.0",
+    "vee-validate": "^2.0.9",
+    "vue-flatpickr-component": "^7.0.2",
     "vue-toasted": "^1.1.24",
     "vue2-datatable-component": "^2.3.0",
-    "vuesax": "^3.0.2"
+    "vuesax": "^3.0.28"
   }
 }
