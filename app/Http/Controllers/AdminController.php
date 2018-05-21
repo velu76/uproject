@@ -17,11 +17,15 @@ class AdminController extends Controller
     	return view('admin.clients');
     }
 
-    public function sources()
+    public function sources(Source $source)
     {
-    	return view('admin.sources');
+        $srcs = $source->dtsources(4); 
+        // var_dump($srcs);
+        // dd("Stop Here!");
+    	return view('admin.sources', compact('srcs'));
     }
 
+    // For vue related components -- on hold
     public function getDTsources(Request $request, Source $source)
     {
         $query = $request->all();

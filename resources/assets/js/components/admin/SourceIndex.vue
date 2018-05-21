@@ -1,38 +1,36 @@
 <template>	
 	<div> 
-		<code>{{ query }}</code>   		
-	    <datatable v-bind="$data" />
+	 <table class="table">
+			<header>
+				<th>Source</th>
+				<th>Actions</th>
+			</header>				
+			<tr v-for="source in sources.data" >	
+				<td>{{source.text}}</td>
+				<td><a class="btn btn-large" @click="editMe(source.text, source.id)">Edit</a></td>		
+			</tr>
+			
+		</table>
   	</div>
 </template>
 
 <script>
-	export default {
-		data: () => ({
-			pageSizeOptions: [5,10,15,20],
-			columns: [
-				{title: 'Source Name', field: 'text', sortable: true },
-				
-				{title: 'Operation', tdComp: 'Opt', visible: true}
-			],
-			data: [],
-			total: 0,
-			query: {},
-						
-		}),
+	export default {		
+		props: ['tdata'],
+		data: () => {
+			return{
+				sources:''
+			};
+		},	
 
-		watch: {
-			query: {
-				handler (query) {
-					axios.post('/admin/getdtsources',{query}).then(response => {
-						this.data = response.data.data;	
-						this.total = response.data.total;
-
-					}).catch(e=>{
-					console.log("Error:" + e);
-					})
-				},
-				deep: true
+		methods: {
+			editMe(item, id){
+				alert("Editing item " + item + " with id of "  + id);
 			}
-		}
+		},
+		mounted() {
+			this.sources=JSON.parse(this.tdata);
+			// console.log(this.sources.data);
+        }
 	}
 </script>

@@ -21,6 +21,7 @@ import BidForm from './components/BidForm';
 import ClientForm from './components/admin/ClientForm';
 import SourceIndex from './components/admin/SourceIndex';
 
+
 const app = new Vue({
     el: '#app',
 
