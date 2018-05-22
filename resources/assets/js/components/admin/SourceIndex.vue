@@ -14,7 +14,7 @@
 
 			<tr>
 				<td></td>
-				<td><button @click="">Change now</button> <button @click="edit=false">Close</button></td>								
+				<td><button @click="updateMe">Change now</button> <button @click="edit=false">Close</button></td>								
 			</tr>
 		</table>
 	</div>
@@ -27,7 +27,7 @@
 			</tr>				
 			<tr v-for="source in sources.data" >	
 				<td>{{source.text}}</td>
-				<td><a class="btn btn-large" @click="editMe(source.text, source.id)">Edit</a></td>		
+				<td><button @click="editMe(source.text, source.id)">Edit</button></td>		
 			</tr>		
 		</table>
   	</div>
@@ -49,6 +49,10 @@
 				// alert("Editing item " + item + " with id of "  + id);
 				this.edit=true;
 				this.sourceedt=item;
+			},
+
+			updateMe() {
+				alert("Update clicked!");
 			}
 		},
 		mounted() {
@@ -82,9 +86,9 @@ th, td {
 button {
 	padding: 3px;
 	margin:4px;
-	color:black;
+	color:#000;
 	font-size:11px;
-	background-color: hsl(171,100%,41%);
+	background-color: #00d1b2;
 }
 
 
