@@ -16,19 +16,13 @@
     "vue": "^2.5.7"
   },
   "dependencies": {
-    "@fortawesome/fontawesome": "^1.1.8",
-    "@fortawesome/fontawesome-free-solid": "^5.0.13",
     "bootstrap": "^4.1.1",
     "bulma": "^0.7.1",
-    "css-element-queries": "^1.0.2",
     "font-awesome": "^4.7.0",
     "lodash": "^4.17.10",
-    "v-click-outside": "^1.0.4",
-    "v-tooltip": "^2.0.0-rc.32",
     "vee-validate": "^2.0.9",
     "vue-flatpickr-component": "^7.0.2",
     "vue-toasted": "^1.1.24",
-    "vue2-datatable-component": "^2.3.0",
     "vuesax": "^3.0.28"
   }
 }
